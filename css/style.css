@@ -15,29 +15,73 @@
     font-family: 'Poppins', sans-serif;
 }
 
+header{
+    background-color: var(--hvit);
+    border-bottom: 1px solid #000;
+}
 .meny{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     overflow: hidden;
 }
 
-.meny ul li{
+.hamburgermeny{
+    font-size: 25px;
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    float: left;
+    padding: 10px; 
+}
+
+.meny span{
+    font-size: 30px;
+    display: flex;
+    gap: 0.5rem;
+    padding: 5px;
+    float: left;
+}
+
+.meny ul{
+    font-size: 25px;
     display: flex;
     gap: 0.5rem;
     list-style: none;
     float: right;
-    padding: 5px;
+}
+.meny ul li{
+    font-size: 25px;
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    float: left;
+    padding: 10px;
 }
 
 img{
     max-width: 100%;
 }
 
+.kategori-btn{
+    background-color: var(--mørkeblå);
+    text-decoration-color: #fff;
+    padding:10px;
+    border-radius: 20px;
+}
+
+
 /* forside */
 
+/* forside første del */
 #forside-banner{
     background-color: var(--lysegrå);
+    padding: 5px 0px 0px 0px;
+    max-width: 100%;
+    background-image:url("../img/høst_blader.png");
+    background-position: top;
+    background-size:contain;
+    background-repeat: no-repeat;
 }
 
 .circle{
@@ -66,6 +110,7 @@ img{
     position: relative;
     text-align: center;
     color: white;
+    padding-top: 5px;
 }
 
 .containerbilde h2{
@@ -74,7 +119,7 @@ img{
 }
 .sentrerttoppbilde{
     position:absolute;
-    top: 5%;
+    top: 7%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
@@ -85,16 +130,54 @@ img{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--lyseblå);
-    text-decoration-color: var(--mørkegrå);
+    text-decoration-color: var(--hvit);
     padding:10px;
     border-radius: 20px;
 }
 
-.kategori-btn{
-    background-color: var(--mørkeblå);
-    text-decoration-color: #fff;
-    padding:10px;
-    border-radius: 20px;
+.containerbilde .sidepiler .sidepil-høyre{
+    position:absolute;
+    top: 50%;
+    right: 2%;
+    transform: translate(-50%, -50%);
+}
+
+.containerbilde .sidepiler .sidepil-venstre{
+    position:absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+/* Forside andre del */
+
+#forside-skokategorier{
+    background-color: var(--lyseblå);
+    overflow: hidden;
+    align-items: center;
+}
+
+#forside-skokategorier h2{
+    text-align: center;
+}
+
+#forside-skokategorier #kvinnekategori{
+    padding: 10px;
+    align-items: center;
+}
+
+#kvinnekategori .kategori-btn{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+#kvinnekategori img{
+    max-width: 100%;
+    height: auto;
+    display: table;
+    margin: 0 auto;
 }
 
 /* mobile styles */
