@@ -88,21 +88,20 @@ img{
     display: table-cell;
     height: 350px;
     width: 350px;
-    text-align: center;
-    margin:auto;
+    margin: auto;
     color: #fff;
     vertical-align: middle;
+    text-align: center;
     border-radius: 50%;
     background: var(--mørkeblå);
 }
-.circle h1 p{
-    position:absolute;
-}
+
 .circle h1{
     font-size: 35px;
 }
 
 .circle p{
+    font-weight: 300;
     font-size: 25px;
 }
 
@@ -114,6 +113,7 @@ img{
 }
 
 .containerbilde h2{
+    font-weight: 300;
     font-size: 25px;
     white-space: nowrap;
 }
@@ -126,13 +126,15 @@ img{
 
 .sentrertbunnknapp .kategori-btn{
     position:absolute;
-    bottom: 2%;
+    bottom: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--lyseblå);
     text-decoration-color: var(--hvit);
     padding:10px;
     border-radius: 20px;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .containerbilde .sidepiler .sidepil-høyre{
@@ -140,6 +142,7 @@ img{
     top: 50%;
     right: 2%;
     transform: translate(-50%, -50%);
+    font-size: 20px;
 }
 
 .containerbilde .sidepiler .sidepil-venstre{
@@ -147,6 +150,7 @@ img{
     top: 50%;
     left: 5%;
     transform: translate(-50%, -50%);
+    font-size: 20px;
 }
 
 /* Forside andre del */
@@ -158,19 +162,43 @@ img{
 }
 
 #forside-skokategorier h2{
+    font-size: 40px;
     text-align: center;
+    padding: 10px;
+    font-weight: 300;
 }
 
-#forside-skokategorier #kvinnekategori{
+#forside-skokategorier{
     padding: 10px;
     align-items: center;
 }
 
+
 #kvinnekategori .kategori-btn{
-    display: block;
-    text-align: center;
-    padding: 10px;
-    margin-top: 5px;
+    display: table;
+    margin: 0 auto;
+    font-size: 25px;
+    max-width: max-content;
+    padding: 10px 40px 10px 40px;
+    font-weight: 300;
+}
+
+#mannekategori .kategori-btn{
+    display: table;
+    margin: 0 auto;
+    font-size: 25px;
+    max-width: max-content;
+    padding: 10px 50px 10px 50px;
+    font-weight: 300;
+}
+
+#barnekategori .kategori-btn{
+    display: table;
+    margin: 0 auto;
+    font-size: 25px;
+    max-width: max-content;
+    padding: 10px 50px 10px 50px;
+    font-weight: 300;
 }
 
 #kvinnekategori img{
@@ -178,6 +206,102 @@ img{
     height: auto;
     display: table;
     margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#mannekategori img{
+    max-width: 100%;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#barnekategori img{
+    max-width: 100%;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Forside tredje del */
+
+.fremhevede-produkter1{
+    background-color: var(--lysegrå);
+    overflow: hidden;
+}
+
+.fremhevede-produkter1 h2{
+    font-size: 35px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.produkterfremhevetliste{
+    display: block;
+    gap: 0.5rem;
+    list-style: none;
+    align-items: center;
+}
+
+.produkterfremhevetliste ul h3{
+    font-size: 25px;
+    color: #000;
+    padding: 5px 5px 0px 5px;
+}
+
+.produkterfremhevetliste ul p{
+    font-size: 20px;
+    max-width: fit-content;
+    color: #000;
+    padding: 0px 5px 0px 5px;
+}
+
+.produkterfremhevetliste .produkten .selveproduktet{
+    float: left;
+    align-items: left;
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    text-align: left;
+}
+
+.produkterfremhevetliste .produktto .selveproduktetto{
+    float: right;
+    align-items: right;
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    text-align: left;
+}
+
+.produkten img{
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produktto img{
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.sidepiler-produkter{
+    display: flex;
+}
+.sidepiler-produkter .venstre{
+    text-align: left;
+}
+
+.sidepiler-produkter .høyre{
+    text-align: right;
 }
 
 /* mobile styles */
