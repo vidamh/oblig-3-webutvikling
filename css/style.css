@@ -1,0 +1,108 @@
+/* variabler */
+:root{
+    --lysegrå: #ebebeb;
+    --lyseblå: #dbe5ff;
+    --mørkeblå: #1d4db3;
+    --mørkegrå: #4d4d4d;
+    --hvit: #fff;
+}
+
+/* styling */
+
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.meny{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow: hidden;
+}
+
+.meny ul li{
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    float: right;
+    padding: 5px;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* forside */
+
+#forside-banner{
+    background-color: var(--lysegrå);
+}
+
+.circle{
+    display: table-cell;
+    height: 350px;
+    width: 350px;
+    text-align: center;
+    margin:auto;
+    color: #fff;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: var(--mørkeblå);
+}
+.circle h1 p{
+    position:absolute;
+}
+.circle h1{
+    font-size: 35px;
+}
+
+.circle p{
+    font-size: 25px;
+}
+
+.containerbilde{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.containerbilde h2{
+    font-size: 25px;
+    white-space: nowrap;
+}
+.sentrerttoppbilde{
+    position:absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.sentrertbunnknapp .kategori-btn{
+    position:absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--lyseblå);
+    text-decoration-color: var(--mørkegrå);
+    padding:10px;
+    border-radius: 20px;
+}
+
+.kategori-btn{
+    background-color: var(--mørkeblå);
+    text-decoration-color: #fff;
+    padding:10px;
+    border-radius: 20px;
+}
+
+/* mobile styles */
+
+/* small tablet styles */
+
+/* large tablet styles */
+
+/* laptop styles */
+
+/* desktop styles */
