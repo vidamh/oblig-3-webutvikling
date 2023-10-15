@@ -27,7 +27,7 @@ header{
 }
 
 .hamburgermeny{
-    font-size: 25px;
+    font-size: 6.667vw;
     display: flex;
     gap: 0.5rem;
     list-style: none;
@@ -36,7 +36,7 @@ header{
 }
 
 .meny span{
-    font-size: 30px;
+    font-size: 8vw;
     display: flex;
     gap: 0.5rem;
     padding: 5px;
@@ -44,14 +44,14 @@ header{
 }
 
 .meny ul{
-    font-size: 25px;
+    font-size: 6.667vw;
     display: flex;
     gap: 0.5rem;
     list-style: none;
     float: right;
 }
 .meny ul li{
-    font-size: 25px;
+    font-size: 6.667vw;
     display: flex;
     gap: 0.5rem;
     list-style: none;
@@ -67,9 +67,28 @@ img{
     background-color: var(--mørkeblå);
     text-decoration-color: #fff;
     padding:10px;
-    border-radius: 20px;
+    border-radius: 10.667vw;
 }
 
+button{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+    float: right;
+}
+
+.her_er_du{
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    float: left;
+    padding: 10px;
+}
 
 /* forside */
 
@@ -82,13 +101,14 @@ img{
     background-position: top;
     background-size:contain;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.circle{
+#circle{
     display: table-cell;
-    height: 350px;
-    width: 350px;
-    margin: auto;
+    height: 66.667vw;
+    width: 66.667vw;
+    margin: 0 auto;
     color: #fff;
     vertical-align: middle;
     text-align: center;
@@ -96,13 +116,14 @@ img{
     background: var(--mørkeblå);
 }
 
-.circle h1{
-    font-size: 35px;
+#circle h2{
+    font-size: 6.133vw;
+    font-weight: 500;
 }
 
-.circle p{
+#circle p{
     font-weight: 300;
-    font-size: 25px;
+    font-size: 5.333vw;
 }
 
 .containerbilde{
@@ -112,16 +133,20 @@ img{
     padding-top: 5px;
 }
 
-.containerbilde h2{
-    font-weight: 300;
-    font-size: 25px;
-    white-space: nowrap;
+.containerbilde img{
+    text-align: center;
+    color: white;
+    padding-top: 5px;
 }
+
 .sentrerttoppbilde{
     position:absolute;
-    top: 7%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: 300;
+    font-size: 6.667vw;
+    white-space: nowrap;
   }
 
 .sentrertbunnknapp .kategori-btn{
@@ -131,18 +156,29 @@ img{
     transform: translate(-50%, -50%);
     background-color: var(--lyseblå);
     text-decoration-color: var(--hvit);
-    padding:10px;
-    border-radius: 20px;
-    font-size: 18px;
+    padding:2.667vw 5.333vw;
+    border-radius: 10.667vw;
+    font-size: 5.333vw;
     font-weight: 300;
 }
 
 .containerbilde .sidepiler .sidepil-høyre{
     position:absolute;
     top: 50%;
-    right: 2%;
+    right: 1%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+    font-size: 5.333vw;background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+}
+
+.sidepil-høyre .glyphicon-chevron-right{
+    font-size: 5.333vw;
 }
 
 .containerbilde .sidepiler .sidepil-venstre{
@@ -150,7 +186,19 @@ img{
     top: 50%;
     left: 5%;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+    font-size: 5.333vw;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+}
+
+.sidepil-venstre .glyphicon-chevron-left{
+    font-size: 5.333vw;
 }
 
 /* Forside andre del */
@@ -162,7 +210,7 @@ img{
 }
 
 #forside-skokategorier h2{
-    font-size: 40px;
+    font-size: 10.667vw;
     text-align: center;
     padding: 10px;
     font-weight: 300;
@@ -177,28 +225,31 @@ img{
 #kvinnekategori .kategori-btn{
     display: table;
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 6.667vw;
     max-width: max-content;
     padding: 10px 40px 10px 40px;
     font-weight: 300;
+    border-radius: 10.667vw;
 }
 
 #mannekategori .kategori-btn{
     display: table;
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 6.667vw;
     max-width: max-content;
     padding: 10px 50px 10px 50px;
     font-weight: 300;
+    border-radius: 10.667vw;
 }
 
 #barnekategori .kategori-btn{
     display: table;
     margin: 0 auto;
-    font-size: 25px;
+    font-size: 6.667vw;
     max-width: max-content;
     padding: 10px 50px 10px 50px;
     font-weight: 300;
+    border-radius: 10.667vw;
 }
 
 #kvinnekategori img{
@@ -228,15 +279,15 @@ img{
     margin-top: 10px;
 }
 
-/* Forside tredje del */
+/* Forside tredje del - brukes også til produktsiden som har samme section */
 
-.fremhevede-produkter1{
+.fremhevede-produkter{
     background-color: var(--lysegrå);
     overflow: hidden;
 }
 
-.fremhevede-produkter1 h2{
-    font-size: 35px;
+.fremhevede-produkter h2{
+    font-size: 9.333vw;
     text-align: center;
     padding: 10px;
     font-weight: 300;
@@ -244,71 +295,95 @@ img{
 }
 
 .produkterfremhevetliste{
-    display: block;
+    display: flex;
     gap: 0.5rem;
     list-style: none;
-    align-items: center;
+    display: block;
 }
 
-.produkterfremhevetliste ul h3{
-    font-size: 25px;
+.produkterfremhevetliste li{
+    display: inline;
+}
+
+.produkterfremhevetliste h3{
+    text-decoration: none;
     color: #000;
+    font-size: 5.333vw;
     padding: 5px 5px 0px 5px;
 }
 
-.produkterfremhevetliste ul p{
-    font-size: 20px;
-    max-width: fit-content;
+.produkterfremhevetliste p{
+    text-decoration: none;
     color: #000;
+    font-size: 4.800vw;
     padding: 0px 5px 0px 5px;
 }
 
-.produkterfremhevetliste .produkten .selveproduktet{
+.produkterfremhevetliste img{
+    height: 48vw;
+    width: 48vw;
+    object-fit: cover;
+}
+
+.produkterfremhevetliste .førsteprodukt{
+    text-align: left;
     float: left;
-    align-items: left;
-    width:  200px;
-    height: 200px;
-    object-fit: cover;
-    text-align: left;
 }
 
-.produkterfremhevetliste .produktto .selveproduktetto{
+.produkterfremhevetliste .andreprodukt{
+    text-align: left;
     float: right;
-    align-items: right;
-    width:  200px;
-    height: 200px;
-    object-fit: cover;
-    text-align: left;
-}
-
-.produkten img{
-    width:  200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.produktto img{
-    width:  200px;
-    height: 200px;
-    object-fit: cover;
 }
 
 .sidepiler-produkter{
-    display: flex;
-}
-.sidepiler-produkter .venstre{
-    text-align: left;
+    font-size: 5.333vw;
 }
 
-.sidepiler-produkter .høyre{
-    text-align: right;
+.sidepil-høyre{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+    float: right;
 }
 
-/* mobile styles */
+.sidepil-venstre{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    font: inherit;
+    border-radius: 0;
+    appearance: none;
+    float: left;
+}
 
-/* small tablet styles */
+/* Produktside andre del */
 
-/* large tablet styles */
+#produktside .fremhevede-produkter{
+    background-color: var(--lyseblå);
+    overflow: hidden;
+}
+
+/* Produktresultater */
+
+#produktresultater .kategori-btn{
+    color: #fff;
+    border: none;
+}
+
+.favorittprodukt{
+    background: transparent;
+    border: none;
+    text-align: inherit;
+    font: inherit;
+    appearance: none;
+}
 
 /* laptop styles */
 

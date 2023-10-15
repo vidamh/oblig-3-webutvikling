@@ -12,87 +12,100 @@
     <title>Forside</title>
 </head>
 <body>
-    <header class="meny">
-        <nav class="hamburgermeny">
-            <ul>
-                <li>
-                    <i class="glyphicon glyphicon-menu-hamburger"></i>
-                </li>
-            </ul>
-        </nav>
-        <span>
-            <a href="index.html" class="logo">Logo</a>
-        </span>
-        <nav>
-            <ul>
-                <li><i class="glyphicon glyphicon-search"></i></li>
-                <li><i class="glyphicon glyphicon-heart"></i></li>
-                <li><i class="glyphicon glyphicon-shopping-cart"></i></li>
-                <li><i class="fa fa-user"></i></li>
-            </ul>
+    <!-- Menyen -->
+    <header class="hovedmeny">
+        <nav class="meny">
+            <aside class="hamburgermeny">
+                <ul>
+                    <li>
+                        <i class="glyphicon glyphicon-menu-hamburger"></i>
+                    </li>
+                </ul>
+            </aside>
+            <span>
+                <a href="index.html" class="logo">Logo</a>
+            </span>
+            <nav>
+                <ul>
+                    <li><i class="glyphicon glyphicon-search"></i></li>
+                    <li><i class="glyphicon glyphicon-heart"></i></li>
+                    <li><i class="glyphicon glyphicon-shopping-cart"></i></li>
+                    <li><i class="fa fa-user"></i></li>
+                </ul>
+            </nav>
         </nav>
     </header>
-    <main>
-        <section id="forside-banner">
-            <div class="circle">
-                <h1>Klar for høsten?</h1>
-                <p>Nam placerat<br>malesuada lorem,<br>sed euismod eros<br> facilisis at.</p>
-            </div>
-            <div class="containerbilde">
+    <!-- Selve forsiden -->
+    <main id="forside">
+        <!-- Del 1 av forsiden -->
+        <div id="forside-banner">
+            <article id="circle">
+                <h2>Klar for høsten?</h2>
+                <p>Nam placerat<br>malesuada lorem,<br>sed euismod eros<br> facilisis at.</p> 
+            </article>
+            <figure class="containerbilde">
                 <img src="img/høst_kvinne.jpg" alt="Autumn woman">
                 <span class="sentrerttoppbilde">
-                    <h2 id="høstkolleksjon">Se høstkolleksjonen 2023!</h2>
+                    <span id="høstkolleksjon">Se høstkolleksjonen 2023!</span>
                 </span>
-                <nav class="sentrertbunnknapp">
+                <span class="sentrertbunnknapp">
                     <a href="#" class="kategori-btn" style="color: #1d4db3">Utforsk her</a>
-                </nav>
-                <nav class="sidepiler">
-                    <a href="#" class="sidepil-venstre" style="color: #fff">
+                </span>
+                <span class="sidepiler">
+                    <button class="sidepil-venstre">
                         <i class="glyphicon glyphicon-chevron-left"></i>
-                    </a>
-                    <a href="#" class="sidepil-høyre" style="color: #fff">
+                    </button>
+                    <button class="sidepil-høyre">
                         <i class="glyphicon glyphicon-chevron-right"></i>
-                    </a>
-                </nav>
-            </div>
-        </section>
+                    </button>
+                </span>
+            </figure>
+        </div>
+        <!-- Del 2 av forsiden -->
         <section id="forside-skokategorier">
             <h2>Noe for alle</h2>
             <article id="kvinnekategori">
                 <img src="img/kvinne.jpg" alt="Image category for women">
-                <a href="produktresultater.html" class="kategori-btn" style="color: #fff">Kvinner</a>
+                <h3>
+                    <a href="produktresultater.html" class="kategori-btn" style="color: #fff">Kvinner</a>
+                </h3>
             </article>
             <article id="mannekategori">
                 <img src="img/mann.jpg" alt="Image category for men">
-                <a href="produktresultater.html" class="kategori-btn" style="color: #fff">Menn</a>
+                <h3>
+                    <a href="produktresultater.html" class="kategori-btn" style="color: #fff">Menn</a>
+                </h3>
             </article>
             <article id="barnekategori">
                 <img src="img/barn.jpg" alt="Image category for children">
-                <a href="produktresultater.html" class="kategori-btn" style="color: #fff">Barn</a>
+                <h3>
+                    <a href="produktresultater.html" class="kategori-btn" style="color: #fff">Barn</a>
+                </h3>
             </article>
         </section>
-        <section class="fremhevede-produkter1">
+        <!-- Del 3.1 av forsiden -->
+        <section class="fremhevede-produkter">
             <h2>Populære produkter</h2>
-            <li class="produkterfremhevetliste">
-                <ul class="produkten">
-                    <article>
-                        <a href="#" class="selveproduktet">
+            <ul class="produkterfremhevetliste">
+                <li class="førsteprodukt">
+                    <article class="selvevprodukt1">
+                        <a href="#">
                             <img src="img/converse.jpg" alt="Product image for Converse">
                             <h3>Vestibulum</h3>
                             <p>2000 kr</p>
                         </a>
                     </article>
-                </ul>
-                <ul class="produktto">
-                    <article>
-                        <a href="#" class="selveproduktetto">
+                </li>
+                <li class="andreprodukt">
+                    <article class="selveprodukt2">
+                        <a href="#">
                             <img src="img/placeholder.svg" alt="Placeholder image for products">
                             <h3>Suspendisse</h3>
                             <p>1000 kr</p>
                         </a>
                     </article>
-                </ul>
-            </li>
+                </li>
+            </ul>
             <span class="sidepiler-produkter">
                 <a href="#" class="sidepil-venstre" style="color: #000">
                     <i class="glyphicon glyphicon-chevron-left"></i>
@@ -102,24 +115,37 @@
                 </a>
             </span>
         </section>
-        <section class="fremhevede-produkter2">
+        <!-- Del 3.2 av forsiden -->
+        <section class="fremhevede-produkter">
             <h2>Nye produkter</h2>
-            <i class="glyphicon glyphicon-chevron-left"></i>
-            <article>
-                <a href="#">
-                    <img src="img/rosa_sko.jpg" alt="Product image for pink heels">
-                    <h3>Curabitur</h3>
-                    <p>2300 kr</p>
-                </a>
-            </article>
-            <article>
-                <a href="#">
-                    <img src="img/placeholder.svg" alt="Placeholder image for products">
-                    <h3>Vivamus</h3>
-                    <p>9000 kr</p>
-                </a>
-            </article>
-            <i class="glyphicon glyphicon-chevron-right"></i>
+            <ul class="produkterfremhevetliste">
+                <li class="førsteprodukt">
+                    <article class="selveprodukt1">
+                        <a href="#">
+                            <img src="img/rosa_sko.jpg" alt="Product image for pink heels">
+                            <h3>Curabitur</h3>
+                            <p>2300 kr</p>
+                        </a>
+                    </article>
+                </li>
+                <li class="andreprodukt">
+                    <article class="selveprodukt2">
+                        <a href="#">
+                            <img src="img/placeholder.svg" alt="Placeholder image for products">
+                            <h3>Vivamus</h3>
+                            <p>9000 kr</p>
+                        </a>
+                    </article>
+                </li>
+            </ul>
+            <span class="sidepiler">
+                <button class="sidepil-venstre">
+                    <i class="glyphicon glyphicon-chevron-left"></i>
+                </button>
+                <button class="sidepil-høyre">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </button>
+            </span>
         </section>
     </main>
 </body>
