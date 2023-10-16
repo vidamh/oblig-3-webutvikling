@@ -12,126 +12,180 @@
     <title>Produkt</title>
 </head>
 <body>
-    <header class="hovedmeny">
-        <nav class="meny">
-            <aside class="hamburgermeny">
-                <ul>
-                    <li>
-                        <i class="glyphicon glyphicon-menu-hamburger"></i>
-                    </li>
-                </ul>
-            </aside>
-            <span>
-                <a href="index.html" class="logo">Logo</a>
-            </span>
-            <nav>
-                <ul>
-                    <li><i class="glyphicon glyphicon-search"></i></li>
-                    <li><i class="glyphicon glyphicon-heart"></i></li>
-                    <li><i class="glyphicon glyphicon-shopping-cart"></i></li>
-                    <li><i class="fa fa-user"></i></li>
+    <div id="grid-container-produktside">
+        <header class="hovedmeny">
+            <nav class="meny">
+                <section class="venstre">
+                    <aside class="hamburgermeny">
+                        <ul>
+                            <li>
+                                <i class="glyphicon glyphicon-menu-hamburger"></i>
+                            </li>
+                        </ul>
+                    </aside>
+                    <span>
+                        <a href="index.html" class="logo">Logo</a>
+                    </span>
+                    <nav class="navbar">
+                        <ul>
+                            <li>
+                                <a href="produktresultater.html">Kvinner</a>
+                            </li>
+                            <li>
+                                <a href="produktresultater.html">Menn</a>
+                            </li>
+                            <li>
+                                <a href="produktresultater.html">Barn</a>
+                            </li>
+                            <li>
+                                <a href="produktresultater.html">Nytt</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="høyre">
+                    <nav class="navikoner">
+                        <ul>
+                            <li>
+                                <form class="søkebaren">
+                                    <section class="søkebarikoner">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                        <input type="text" class="input-field" placeholder="Søk produkter her">
+                                    </section>
+                                </form>
+                            </li>
+                            <li class="mobilsøk"><i class="glyphicon glyphicon-search"></i></li>
+                            <li><i class="glyphicon glyphicon-heart"></i></li>
+                            <li><i class="glyphicon glyphicon-shopping-cart"></i></li>
+                            <li><i class="fa fa-user"></i></li>
+                        </ul>
+                    </nav>
+                </section>
+            </nav>
+        </header>
+        <main id="produktside">
+            <nav class="sideinformasjon">
+                <ul class="her_er_du">
+                    <li><a href="index.html" class="navigasjon-btn">Hjem -</a></li>
+                    <li><a href="produktresultater.html" class="navigasjon-btn">Dame -</a></li>
+                    <li><a href="produkt.html" class="navigasjon-btn">Aenean maximus</a></li>
                 </ul>
             </nav>
-        </nav>
-    </header>
-    <main id="produktside">
-        <nav class="sideinformasjon">
-            <ul class="her_er_du">
-                <li><a href="index.html" class="navigasjon-btn">Hjem -</a></li>
-                <li><a href="produktresultater.html" class="navigasjon-btn">Dame -</a></li>
-                <li><a href="produkt.html" class="navigasjon-btn">Aenean maximus</a></li>
-            </ul>
-        </nav>
-        <section id="produkt">
-            <article id="produktinfo">
-                <img src="img/sneakers_merke.jpg" alt="Product image for sneakers">
-                <span class="sidepiler">
-                    <button class="sidepil-venstre">
-                        <i class="glyphicon glyphicon-chevron-left"></i>
-                    </button>
-                    <button class="sidepil-høyre">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </button>
-                </span>
-                <h2>Aenean maximus</h2>
-                    <p>Aliquam ut turpis varius, efficitur justo a</p>
-                    <p>2000,-</p>
-            </article>
-            <p>Farge: Hvit</p>
-            <button class="farge-btn">Farge 1</a>
-            <button class="farge-btn">Farge 2</a>
-            <button class="farge-btn">Farge 3</a>
-            <button class="drop-down-btn">Velg størrelse</button>
-            <button class="handlekurv-btn">Legg til i handlekurv</button>
-            <button class="favoritt-btn">Lagre i favoritter</button>
-            <p>Tilgjengelighet:</p>
-            <p>Leveres innen 2 - 3 arbeidsdager</p>
-            <button class="frakt-info-btn">Les mer om frakt, retur og bytte her</button>
-            <button class="drop-down-btn">Produktdetaljer</button>
-            <button class="drop-down-btn">Anmeldelser</button>
-        </section>
-        <section class="fremhevede-produkter">
-            <h2>Lignende produkter</h2>
-            <ul class="produkterfremhevetliste">
-                <li class="førsteprodukt">
-                    <article class="selvevprodukt1">
-                        <a href="#">
-                            <img src="img/converse.jpg" alt="Product image for Converse">
-                            <h3>Vestibulum</h3>
-                            <p>2000 kr</p>
-                        </a>
-                    </article>
-                </li>
-                <li class="andreprodukt">
-                    <article class="selveprodukt2">
-                        <a href="#">
-                            <img src="img/placeholder.svg" alt="Placeholder image for products">
-                            <h3>Suspendisse</h3>
-                            <p>1000 kr</p>
-                        </a>
-                    </article>
-                </li>
-            </ul>
-            <span class="sidepiler">
-                <button class="sidepil-venstre">
-                    <i class="glyphicon glyphicon-chevron-left"></i>
-                </button>
-                <button class="sidepil-høyre">
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </button>
-            </span>
-        </section>
-        <section class="fremhevede-produkter">
-            <h2>Anbefalte produkter for deg</h2>
-            <ul class="produkterfremhevetliste">
-                <li class="førsteprodukt">
-                    <article class="selveprodukt1">
-                        <a href="#">
-                            <img src="img/rosa_sko.jpg" alt="Product image for pink heels">
-                            <h3>Curabitur</h3>
-                            <p>2300 kr</p>
-                        </a>
-                    </article>
-                </li>
-                <li class="andreprodukt">
-                    <article class="selveprodukt2">
-                        <a href="#">
-                            <img src="img/placeholder.svg" alt="Placeholder image for products">
-                            <h3>Vivamus</h3>
-                            <p>9000 kr</p>
-                        </a>
-                    </article>
-                </li>
-            </li>
-            <span class="sidepiler">
-                <button class="sidepil-venstre">
-                    <i class="glyphicon glyphicon-chevron-left"></i>
-                </button>
-                <button class="sidepil-høyre">
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </button>
-            </span>
-        </section>
+            <section id="produkt">
+                <article id="produktinfo">
+                    <img src="img/sneakers_merke.jpg" alt="Product image for sneakers">
+                    <span class="sidepiler">
+                        <button class="sidepil-venstre">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                        </button>
+                        <button class="sidepil-høyre">
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                    </span>
+                    <h2>Aenean maximus</h2>
+                        <p>Aliquam ut turpis varius, efficitur justo a</p>
+                        <p>2000,-</p>
+                </article>
+                <p>Farge: Hvit</p>
+                <button class="farge-btn">Farge 1</a>
+                <button class="farge-btn">Farge 2</a>
+                <button class="farge-btn">Farge 3</a>
+                <button class="drop-down-btn">Velg størrelse</button>
+                <button class="handlekurv-btn">Legg til i handlekurv</button>
+                <button class="favoritt-btn">Lagre i favoritter</button>
+                <p>Tilgjengelighet:</p>
+                <p>Leveres innen 2 - 3 arbeidsdager</p>
+                <button class="frakt-info-btn">Les mer om frakt, retur og bytte her</button>
+                <button class="drop-down-btn">Produktdetaljer</button>
+                <button class="drop-down-btn">Anmeldelser</button>
+            </section>
+            <footer class="fremhev-produkt">
+                <section class="fremhevede-produkter">
+                    <h2>Lignende produkter</h2>
+                    <ul class="produkterfremhevetliste">
+                        <li class="førsteprodukt">
+                            <article class="selvevprodukt1">
+                                <a href="#">
+                                    <img src="img/converse.jpg" alt="Product image for Converse">
+                                    <h3>Vestibulum</h3>
+                                    <p>2000 kr</p>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="andreprodukt">
+                            <article class="selveprodukt2">
+                                <a href="#">
+                                    <img src="img/placeholder.svg" alt="Placeholder image for products">
+                                    <h3>Suspendisse</h3>
+                                    <p>1000 kr</p>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="tredjeprodukt">
+                            <article class="selveprodukt3">
+                                <a href="#">
+                                    <img src="img/placeholder.svg" alt="Placeholder image for products">
+                                    <h3>Etiam</h3>
+                                    <p>1000 kr</p>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                    <section class="sidepiler">
+                        <span class="sidepiler-produkter">
+                            <a href="#" class="sidepil-venstre" style="color: #000">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </a>
+                            <a href="#" class="sidepil-høyre" style="color: #000">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </a>
+                        </span>
+                    </section>
+                </section>
+                <section class="fremhevede-produkter">
+                    <h2>Anbefalte produkter for deg</h2>
+                    <ul class="produkterfremhevetliste">
+                        <li class="førsteprodukt">
+                            <article class="selveprodukt1">
+                                <a href="#">
+                                    <img src="img/rosa_sko.jpg" alt="Product image for pink heels">
+                                    <h3>Curabitur</h3>
+                                    <p>2300 kr</p>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="andreprodukt">
+                            <article class="selveprodukt2">
+                                <a href="#">
+                                    <img src="img/placeholder.svg" alt="Placeholder image for products">
+                                    <h3>Vivamus</h3>
+                                    <p>9000 kr</p>
+                                </a>
+                            </article>
+                        </li>
+                        <li class="tredjeprodukt">
+                            <article class="selveprodukt3">
+                                <a href="#">
+                                    <img src="img/placeholder.svg" alt="Placeholder image for products">
+                                    <h3>Nunc aliquam</h3>
+                                    <p>1200 kr</p>
+                                </a>
+                            </article>
+                        </li>
+                    </ul>
+                    <section class="sidepiler">
+                        <span class="sidepiler-produkter">
+                            <a href="#" class="sidepil-venstre" style="color: #000">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                            </a>
+                            <a href="#" class="sidepil-høyre" style="color: #000">
+                                <i class="glyphicon glyphicon-chevron-right"></i>
+                            </a>
+                        </span>
+                    </section>
+                </section>
+            </footer>
+    </div>
     </main>
 </body>
 </html>

@@ -15,15 +15,38 @@
     font-family: 'Poppins', sans-serif;
 }
 
-header{
+
+#grid-container{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.hovedmeny{
+    display: flex;
+    flex-direction: row;
     background-color: var(--hvit);
     border-bottom: 1px solid #000;
+    grid-area: "header";
 }
+
 .meny{
     display: flex;
     justify-content: space-between;
+    width: 100%;
     align-items: center;
     overflow: hidden;
+}
+
+.venstre{
+    justify-content: left;
+}
+
+.høyre{
+    justify-content: right;
+}
+
+.søkebaren{
+    display: none;
 }
 
 .hamburgermeny{
@@ -35,12 +58,17 @@ header{
     padding: 10px; 
 }
 
-.meny span{
+.meny .logo{
     font-size: 8vw;
     display: flex;
     gap: 0.5rem;
     padding: 5px;
-    float: left;
+    justify-content: left;
+}
+
+.navikoner{
+    display: flex;
+    justify-content: right;
 }
 
 .meny ul{
@@ -57,6 +85,10 @@ header{
     list-style: none;
     float: left;
     padding: 10px;
+}
+
+.navbar{
+    display: none;
 }
 
 img{
@@ -92,7 +124,12 @@ button{
 
 /* forside */
 
+#forside{
+    grid-area: "main";
+}
+
 /* forside første del */
+
 #forside-banner{
     background-color: var(--lysegrå);
     padding: 5px 0px 0px 0px;
@@ -102,6 +139,10 @@ button{
     background-size:contain;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+
+#circlecontainer{
+    margin: 1.337vw 16vw;
 }
 
 #circle{
@@ -204,6 +245,8 @@ button{
 /* Forside andre del */
 
 #forside-skokategorier{
+    display: flex;
+    flex-direction: column;
     background-color: var(--lyseblå);
     overflow: hidden;
     align-items: center;
@@ -221,6 +264,16 @@ button{
     align-items: center;
 }
 
+.kategorier{
+    list-style: none;
+    text-decoration: none;
+}
+
+.kategorier li{
+    list-style: none;
+    text-decoration: none;
+    padding: 10px;
+}
 
 #kvinnekategori .kategori-btn{
     display: table;
@@ -281,9 +334,18 @@ button{
 
 /* Forside tredje del - brukes også til produktsiden som har samme section */
 
+.fremhev-produkt{
+    grid-area: "footer";
+}
+
 .fremhevede-produkter{
     background-color: var(--lysegrå);
     overflow: hidden;
+    column-span: all;
+}
+
+.selveprodukt3{
+    display: none;
 }
 
 .fremhevede-produkter h2{
@@ -296,6 +358,7 @@ button{
 
 .produkterfremhevetliste{
     display: flex;
+    flex-direction: row;
     gap: 0.5rem;
     list-style: none;
     display: block;
@@ -385,6 +448,442 @@ button{
     appearance: none;
 }
 
-/* laptop styles */
-
 /* desktop styles */
+
+
+/* Forsiden på desktop */
+
+@media only screen and (min-width: 1000px){
+    #grid-container{
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    /* header */
+
+    .hovedmeny{
+        display: block;
+        flex-direction: row;
+        width: 100%;
+        grid-column: 1/-1;
+    }
+
+    .meny{
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .venstre{
+        justify-content: left;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .høyre{
+        justify-content: right;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .logo-navbar{
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.883vw;
+    }
+
+    .navbar{
+        display: flex;
+        gap: 0.5rem;
+        padding: 5px;
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .navbar li a{
+        font-size: 1.604vw;
+        gap: 0.5rem;
+        padding: 5px;
+        float: left;
+    }
+
+    .hamburgermeny ul li{
+        font-size: 2.139vw;
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+        float: left;
+        padding: 0.535vw; 
+    }
+    .meny .logo{
+        font-size: 3.209vw;
+        display: flex;
+        gap: 0.5rem;
+        padding: 5px;
+        float: left;
+    }
+
+    .navikoner .mobilsøk{
+        display: none;
+    }
+
+    .søkebaren{
+        display: flex;
+        max-width:400px;
+        margin:auto;
+        position: relative;
+    }
+    .søkebarikoner i {
+        position: absolute;
+        top: 15%;
+        right: 2%;
+        transform: translate(-15%, -2%);
+    }
+      
+    .søkebarikoner {
+        width: 100%;
+        margin-bottom: 0.535vw;
+        font-size: 1.604vw;
+    }
+      
+    .icon {
+        padding: 0.535vw 0.535vw 0.535vw 2.674vw;
+        min-width: 2.139vw;
+    }
+      
+    .input-field {
+        width: 100%;
+        padding: 0.535vw;
+        text-align: left;
+        margin-bottom: 3px;
+        border-radius: 2.674vw;
+        font-size: 1.070vw;
+        padding: 0.535vw 5.348vw 0.535vw 1.070vw;
+    }
+
+    .meny ul{
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+        float: right;
+    }
+    .meny ul li{
+        font-size: 3.209vw;
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+        float: left;
+        padding: 1.070vw;
+    }
+
+    /* forside desktop */
+
+    #forside{
+        grid-area: "main";
+        grid-column: 1/-1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #forside-banner{
+        display: flex;
+        max-width: fit-content;
+        flex-direction: row;
+        background-color: var(--lysegrå);
+        padding: 5px 0px 0px 0px;
+        max-width: 100%;
+        background-image:url("../img/høst_blader.png");
+        background-position: top;
+        background-size:cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    #circlecontainer{
+        max-width: 26.738vw;
+        max-height: 26.738vw;
+        margin: 10.027vw 1.337vw;
+    }
+
+    #circle{
+        display: table-cell;
+        height: 26.738vw;
+        width: 26.738vw;
+        margin: 0 auto;
+        color: #fff;
+        vertical-align: middle;
+        text-align: center;
+        border-radius: 50%;
+        background: var(--mørkeblå);
+    }
+    
+    #circle h2{
+        font-size: 2.674vw;
+        font-weight: 500;
+    }
+    
+    #circle p{
+        font-weight: 300;
+        font-size: 2.005vw;
+    }
+
+    .containerbilde{
+        position: relative;
+        text-align: right;
+        color: white;
+        padding-top: 5px;
+        max-width: 60.160vw;
+    }
+    
+    .containerbilde img{
+        text-align: center;
+        color: white;
+        padding-top: 5px;
+        margin: 2.005vw;
+    }
+    
+    .sentrerttoppbilde{
+        position:absolute;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 300;
+        font-size: 4.011vw;
+        white-space: nowrap;
+      }
+    
+    .sentrertbunnknapp .kategori-btn{
+        position:absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: var(--lyseblå);
+        text-decoration-color: var(--hvit);
+        padding: 0.668vw 1.337vw;
+        border-radius: 3.342vw;
+        font-size: 2.005vw;
+        font-weight: 300;
+    }
+    
+    .containerbilde .sidepiler .sidepil-høyre{
+        position:absolute;
+        top: 50%;
+        right: 0.5%;
+        transform: translate(-50%, -50%);
+        font-size: 5.333vw;background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        text-align: inherit;
+        font: inherit;
+        border-radius: 0;
+        appearance: none;
+    }
+    
+    .sidepil-høyre .glyphicon-chevron-right{
+        font-size: 2.674vw;
+    }
+    
+    .containerbilde .sidepiler .sidepil-venstre{
+        position:absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        text-align: inherit;
+        font: inherit;
+        border-radius: 0;
+        appearance: none;
+    }
+    
+    .sidepil-venstre .glyphicon-chevron-left{
+        font-size: 2.674vw;
+    }
+    
+    #containerforside1{
+        display: flex;
+        justify-content: right;
+    }
+
+    /* forside andre del */
+
+    #forside-skokategorier{
+        grid-area: "main";
+        grid-column: 1/-1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #forside-skokategorier h2{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 3.342vw;
+    }
+
+    .kategorier{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        list-style: none;
+        text-decoration: none;
+        justify-content: center;
+    }
+
+    .kategorier li{
+        list-style: none;
+        padding: 1.337vw;
+        display:inline-block;
+    }
+
+    
+    #kvinnekategori .kategori-btn{
+        display: table;
+        margin: 0 auto;
+        font-size: 2.674vw;
+        max-width: max-content;
+        padding: 0.668vw 2.674vw;
+        font-weight: 300;
+        border-radius: 3.342vw;
+    }
+    
+    #mannekategori .kategori-btn{
+        display: table;
+        margin: 0 auto;
+        font-size: 2.674vw;
+        max-width: max-content;
+        padding: 0.668vw 3.676vw;
+        font-weight: 300;
+        border-radius: 3.342vw;
+    }
+    
+    #barnekategori .kategori-btn{
+        display: table;
+        margin: 0 auto;
+        font-size: 2.674vw;
+        max-width: max-content;
+        padding: 0.668vw 4.345vw;
+        font-weight: 300;
+        border-radius: 3.342vw;
+    }
+    
+    #kvinnekategori img{
+        width: fit-content;
+        max-height: 40.107vw;
+        display: table;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    #mannekategori img{
+        width: fit-content;
+        max-height: 40.107vw;
+        display: table;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    #barnekategori img{
+        width: fit-content;
+        max-height: 40.107vw;
+        display: table;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    /* forside tredje del */
+
+    .selveprodukt3{
+        display: flex;
+    }
+    
+    .fremhev-produkt{
+        grid-area: "main";
+        grid-column: 1/-1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--lysegrå);
+    }
+
+
+    .fremhevede-produkter h2{
+        font-size: 3.342vw;
+        width: 100%;
+    }
+    
+    .produkterfremhevetliste{
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        list-style: none;
+        display: block;
+        column-span: all;
+    }
+    
+    .produkterfremhevetliste li{
+        display: block;
+    }
+    
+    .produkterfremhevetliste h3{
+        text-decoration: none;
+        color: #000;
+        font-size: 2.674vw;
+        padding: 0.334vw 0.334vw 0px 0.334vw;
+    }
+    
+    .produkterfremhevetliste p{
+        text-decoration: none;
+        color: #000;
+        font-size:2.005vw;
+        padding: 0px 0.334vw;
+    }
+    
+    .produkterfremhevetliste img{
+        height: 20.053vw;
+        width: 20.053vw;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .produkterfremhevetliste .førsteprodukt{
+        text-align: left;
+        float: left;
+    }
+    
+    .produkterfremhevetliste .andreprodukt{
+        text-align: left;
+        float: left
+    }
+
+    .produkterfremhevetliste .tredjeprodukt{
+        float: left;
+    }
+
+    .sidepiler{
+        display: block;
+    }
+
+    .sidepiler-til-venstre{
+       float: left;
+    }
+
+    .sidepil-venstre{
+        float: left;
+    }
+    
+    /* Produktside andre del */
+    
+    #produktside .fremhevede-produkter{
+        background-color: var(--lyseblå);
+        overflow: hidden;
+    }
+    
+    }
