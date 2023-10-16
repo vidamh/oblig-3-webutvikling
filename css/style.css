@@ -508,6 +508,10 @@ button{
         white-space: nowrap;
     }
 
+    .navikoner2{
+        margin-bottom: 30px;
+    }
+
     .navbar li a{
         font-size: 1.604vw;
         gap: 0.5rem;
