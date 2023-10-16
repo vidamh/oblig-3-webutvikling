@@ -27,6 +27,13 @@
     background-color: var(--hvit);
     border-bottom: 1px solid #000;
     grid-area: "header";
+    height: 13.333vw;
+}
+
+.logo-navbar{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
 }
 
 .meny{
@@ -465,6 +472,7 @@ button{
         flex-direction: row;
         width: 100%;
         grid-column: 1/-1;
+        height: 5.958vw;
     }
 
     .meny{
