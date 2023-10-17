@@ -3,48 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,400;1,500&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Produktresultater</title>
 </head>
 <body>
-    <header class="hovedmeny">
-        <nav class="meny">
-            <section class="venstre">
-                <aside class="hamburgermeny">
-                    <ul>
-                        <li>
-                            <i class="glyphicon glyphicon-menu-hamburger"></i>
-                        </li>
-                    </ul>
-                </aside>
-                <span>
-                    <a href="index.html" class="logo">Logo</a>
-                </span>
-                <nav class="navbar">
-                    <ul>
-                        <li>
-                            <a href="produktresultater.html">Kvinner</a>
-                        </li>
-                        <li>
-                            <a href="produktresultater.html">Menn</a>
-                        </li>
-                        <li>
-                            <a href="produktresultater.html">Barn</a>
-                        </li>
-                        <li>
-                            <a href="produktresultater.html">Nytt</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="høyre">
+    <div id="grid-container-produktresultater">
+        <header class="hovedmeny">
+            <nav class="meny">
+                <section class="venstre">
+                    <aside class="hamburgermeny">
+                        <ul>
+                            <li>
+                                <i class="glyphicon glyphicon-menu-hamburger"></i>
+                            </li>
+                        </ul>
+                    </aside>
+                    <section class="logo-navbar">
+                        <span>
+                            <a href="index.html" class="logo">Logo</a>
+                        </span>
+                        <nav class="navbar">
+                            <ul>
+                                <li>
+                                    <a href="produktresultater.html">Kvinner</a>
+                                </li>
+                                <li>
+                                    <a href="produktresultater.html">Menn</a>
+                                </li>
+                                <li>
+                                    <a href="produktresultater.html">Barn</a>
+                                </li>
+                                <li>
+                                    <a href="produktresultater.html">Nytt</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section>
+                </section>
+                <section class="høyre">
                 <nav class="navikoner">
-                    <ul>
+                    <ul class="navikoner2">
                         <li>
                             <form class="søkebaren">
                                 <section class="søkebarikoner">
@@ -59,67 +62,186 @@
                         <li><i class="fa fa-user"></i></li>
                     </ul>
                 </nav>
+                </section>
+            </nav>
+        </header>
+        <main id="produktresultater">
+            <nav class="sideinformasjon">
+                <ul class="her_er_du">
+                    <li><a href="index.html" class="navigasjon-btn">Hjem -</a></li>
+                    <li><a href="produktresultater.html" class="navigasjon-btn">Sko -</a></li>
+                    <li><a href="produktresultater.html" class="navigasjon-btn">Dame</a></li>
+                </ul>
+            </nav>
+            <section id="filtreringsmeny">
+                <section class="filtermeny-mobil">
+                    <ul class="filtere">
+                        <li>
+                            <button class="filtrering-btn">
+                                Dame
+                                <i class="glyphicon glyphicon-chevron-down"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="filtrering-btn">
+                                Filtre
+                                <i class="glyphicon glyphicon-align-left"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="filtrering-btn">
+                                Sortering
+                                <i class="glyphicon glyphicon-sort"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    </section>
+                <section class="filtermeny-desktop">
+                    <ul class="filtere-desktop">
+                        <section class="filteremedoverlay">
+                            <span class="sorterknapp">
+                                <li class ="sort">
+                                    <button class="filtrering-btn">
+                                        Sorter etter
+                                        <i class="glyphicon glyphicon-chevron-down"></i>
+                                    </button>
+                                </li>
+                            </span>
+                            <span class="seksjonfilter">
+                                <li class="ikkeblock">
+                                    <button class="filtrering-btn">
+                                        Dame
+                                        <i class="fa fa-check-circle"></i>
+                                    </button>
+                                </li>
+                                <li class="blockseksjon">
+                                    <button class="filtrering-btn">
+                                        Mann
+                                        <i class="fa fa-circle-thin"></i>
+                                    </button>
+                                </li>
+                                <li class="blockseksjon">
+                                    <button class="filtrering-btn">
+                                        Barn
+                                        <i class="fa fa-circle-thin"></i>
+                                    </button>
+                                </li>
+                            </span>
+                        </section>
+                        <span class="andrefiltre">
+                            <li>
+                                <button class="filtrering-btn">
+                                    Skotype
+                                    <i class="glyphicon glyphicon-chevron-down"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="filtrering-btn">
+                                    Størrelse
+                                    <i class="glyphicon glyphicon-chevron-down"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="filtrering-btn">
+                                    Merke
+                                    <i class="glyphicon glyphicon-chevron-down"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="filtrering-btn">
+                                    Farge
+                                    <i class="glyphicon glyphicon-chevron-down"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="filtrering-btn">
+                                    Sorterer etter relevanse
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <button class="filtrering-btn">
+                                    Filtrerer etter størrelse 40
+                                    <i class="glyphicon glyphicon-remove"></i>
+                                </button>
+                            </li>
+                        </span>
+                    </ul>
+                </section>
             </section>
-        </nav>
-    </header>
-    <main id="produktresultater">
-        <nav class="sideinformasjon">
-            <ul class="her_er_du">
-                <li><a href="index.html" class="navigasjon-btn">Hjem -</a></li>
-                <li><a href="produktresultater.html" class="navigasjon-btn">Dame</a></li>
-            <ul>
-        </nav>
-        <section id="filtreringsmeny">
-            <a href="#" class="filtrering-btn">Dame</a>
-            <a href="#" class="filtrering-btn">Filtre</a>
-            <a href="#" class="filtrering-btn">Sortering</a>
-        </section>
-        <section class="produktresultater">
-            <article>
-                <a href="produkt.html">
-                    <img src="img/sneakers_merke.jpg" alt="Product image for sneakers">
-                    <h3>Aenean maximus</h3>
-                    <p>2000 kr</p>
-                </a>
-                <button class="favorittprodukt">
-                    <i class="glyphicon glyphicon-heart"></i>
-                </button>
-            </article>
-            <article>
-                <a href="#">
-                    <img src="img/placeholder.svg" alt="Placeholder image for products">
-                    <h3>Vivamus</h3>
-                    <p>900 kr</p>
-                </a>
-                <button class="favorittprodukt">
-                    <i class="glyphicon glyphicon-heart"></i>
-                </button>
-            </article>
-            <article>
-                <a href="#">
-                    <img src="img/placeholder.svg" alt="Placeholder image for products">
-                    <h3>Proin suscipit</h3>
-                    <p>1250 kr</p>
-                </a>
-                <button class="favorittprodukt">
-                    <i class="glyphicon glyphicon-heart"></i>
-                </button>
-            </article>
-            <article>
-                <a href="#">
-                    <img src="img/placeholder.svg" alt="Placeholder image for products">
-                    <h3>Pellentesque</h3>
-                    <p>1500 kr</p>
-                </a>
-                <button class="favorittprodukt">
-                    <i class="glyphicon glyphicon-heart"></i>
-                </button>
-            </article>
-                <button class="kategori-btn">
-                    Se flere produkter
-                </button>
-                <p>Viser x av x produkter</p>
-        </section>
-    </main>
+            <section class="produktresultatene">
+                <ul class="produktliste">
+                    <li>
+                        <article class="førsteprodukt">
+                            <a href="produkt.html">
+                                <img src="img/sneakers_merke.jpg" alt="Product image for sneakers">
+                                <h3>Aenean ma...</h3>
+                                <p>2000 kr</p>
+                            </a>
+                            <section class="hjerte">
+                                <button class="favorittprodukt">
+                                    <i class="glyphicon glyphicon-heart"></i>
+                                </button>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="andreprodukt">
+                            <a href="#">
+                                <img src="img/placeholder.svg" alt="Placeholder image for products">
+                                <h3>Vivamus</h3>
+                                <p>900 kr</p>
+                            </a>
+                            <section class="hjerte">
+                                <button class="favorittprodukt">
+                                    <i class="glyphicon glyphicon-heart"></i>
+                                </button>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="førsteprodukt">
+                            <a href="#">
+                                <img src="img/placeholder.svg" alt="Placeholder image for products">
+                                <h3>Proin suscipit</h3>
+                                <p>1250 kr</p>
+                            </a>
+                            <section class="hjerte">
+                                <button class="favorittprodukt">
+                                    <i class="glyphicon glyphicon-heart"></i>
+                                </button>
+                            </section>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="andreprodukt">
+                            <a href="#">
+                                <img src="img/placeholder.svg" alt="Placeholder image for products">
+                                <h3>Pellentesque</h3>
+                                <p>1500 kr</p>
+                            </a>
+                            <section class="hjerte">
+                                <button class="favorittprodukt">
+                                    <i class="glyphicon glyphicon-heart"></i>
+                                </button>
+                            </section>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer id="flere-produkter">
+            <section id="knappoginfo">
+                <section class="trykkforflere">
+                    <button class="kategori-btn">
+                        Se flere produkter
+                    </button>
+                </section>
+                <section id="viserhvormange">
+                    <p>Viser x av x produkter</p>
+                </section>
+            </section>
+        </footer>
+    </div>
 </body>
 </html>

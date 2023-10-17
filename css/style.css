@@ -372,7 +372,7 @@ button{
 }
 
 .produkterfremhevetliste li{
-    display: inline;
+    display: inline-block;
 }
 
 .produkterfremhevetliste h3{
@@ -440,19 +440,174 @@ button{
     overflow: hidden;
 }
 
-/* Produktresultater */
+/* Produktresultater
 
-#produktresultater .kategori-btn{
-    color: #fff;
-    border: none;
+/* Produktresultater første del*/
+
+#grid-container-produktresultater{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
 }
 
-.favorittprodukt{
+#produktresultater{
+    grid-area: "main";
+    background-color: var(--lysegrå)
+}
+
+#flere-produkter{
+    grid-area: "footer";
+}
+
+.filtreogsideinfo{
+    background-color: var(--lyseblå);
+}
+
+.filtermeny-desktop{
+    display: none;
+}
+
+.sideinformasjon .her_er_du{
+    display: flex;
+    justify-content: left;
+    column-span: all;
+    width: 100%;
+    background-color: var(--lyseblå);
+    margin: 0;
+}
+
+.her_er_du a{
+    text-decoration: none;
+    color: #4d4d4d;;
+    font-size: 4vw;
+}
+
+#filtreringsmeny{
+    background-color: var(--lyseblå);
+}
+
+.filtere{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    column-span: all;
+    width: 100%;
+    margin-top: 0;
+}
+
+.filtere .filtrering-btn{
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    font-size: 4vw;
+    margin: 0 1.333vw 5.333vw 1.333vw;
+    padding: 2.667vw 5.333vw 2.667vw 2.667vw;
+}
+
+.filtrering-btn i{
+    font-size: 4vw;
+    padding-left: 2.667vw;
+    vertical-align: baseline;
+    padding-top: 0.533vw;
+    float: right;
+}
+
+.filtrering-btn .glyphicon-chevron-down{
+    vertical-align: bottom;
+    padding-bottom: 0.533vw;
+}
+
+/* Produktresultater andre del*/
+
+.produktresultatene{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+.produktliste{
+    display: inline-block;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+
+.produktliste li{
+    display: inline-block;
+    max-width: fit-content;
+    position: relative;
+}
+
+.produktliste .førsteprodukt{
+    float: left;
+}
+
+.produktliste .andreprodukt{
+    float:right;
+}
+
+.produktliste h3{
+    text-decoration: none;
+    color: #000;
+    font-size: 5.333vw;
+    padding: 5px 5px 0px 5px;
+}
+
+.produktliste p{
+    text-decoration: none;
+    color: #000;
+    font-size: 4.800vw;
+    padding: 0px 5px 0px 5px;
+}
+
+
+.produktliste img{
+    height: 48vw;
+    width: 48vw;
+    object-fit: cover;
+}
+
+article .favorittprodukt{
     background: transparent;
     border: none;
-    text-align: inherit;
-    font: inherit;
+    text-align: left;
     appearance: none;
+}
+
+.hjerte{
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    bottom: 15%;
+    right: 5%;
+    transform: translate(-15, -5);
+}
+
+.favorittprodukt .glyphicon-heart{
+    font-size: 5.333vw;
+}
+
+/* Produktresultater tredje del */
+
+#flere-produkter{
+    grid-area: "footer";
+    background-color: var(--lysegrå);
+    display: flex;
+    justify-content: center;
+    column-span: all;
+    margin-top: 0;
+}
+
+#flere-produkter .kategori-btn{
+    color: #fff;
+    text-align: center;
+    font-size: 5.333vw;
+    padding: 2.667vw 5.333vw;
+}
+
+#viserhvormange{
+    text-align: center;
+    font-size: 4vw;
 }
 
 /* desktop styles */
@@ -898,4 +1053,165 @@ button{
         overflow: hidden;
     }
     
+    /* Produktresultater første del */
+
+    #grid-container-produktresultater{
+        display: grid;
+        grid-template-areas: "header" "main" "footer";
+    }
+    
+    #produktresultater{
+        grid-template-areas: "main";
+        display: grid;
+        background-color: var(--lysegrå);
+    }
+    
+    #flere-produkter{
+        grid-template-areas: "footer";
+        display: grid;
+    }
+
+    .sideinformasjon .her_er_du{
+        background-color: #fff;
+        margin-bottom: 0.668vw;
+        padding-left: 3.342vw;
+    }
+
+    .her_er_du a{
+        font-size: 1.337vw;
+    }
+
+    .filtermeny-mobil{
+        display: none;
+    }
+
+    .filtere{
+        display: none;
+    }
+
+    #filtreringsmeny{
+        display: block;
+        background-color: var(--lyseblå);
+        align-items: center;
+        text-align: center;
+        column-span: 1;
+        overflow: hidden;
+        width: fit-content;
+        margin: 0.668vw 1.337vw;
+    }
+
+    .filtermeny-desktop{
+        display: flex;
+        justify-content: left;
+        overflow: hidden;
+    }
+
+    .filtere-desktop{
+        list-style: none;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        position: relative;
+    }
+    
+
+    .filtrering-btn{
+        background-color: #fff;
+        border: 1px solid #ebebeb;
+        font-size: 1.337vw;
+        margin: 0.668vw;
+        padding: 0.668vw 3.342vw 0.668vw 0.334vw;
+        text-align: right;
+    }
+    
+    .filtrering-btn i{
+        font-size: 1.337vw;
+        padding-left: 2.667vw;
+        vertical-align: baseline;
+        padding-top: 0.533vw;
+        float: right;
+    }
+
+    .sorterknapp{
+        float:right;
+        display: flex;
+        justify-content: right;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .sort{
+        display: flex;
+        width: fit-content;
+        float:right;
+        justify-content: right;
+        flex-direction: column;
+        position: absolute;
+        right: 2%;
+    }
+
+    .sort .filtrering-btn{
+        font-size: 1.337vw;
+        padding: 0.668vw 2.005vw 0.334vw 0.668vw;
+        margin-top: 0.668vw;
+        border-radius: 3.342vw;
+        vertical-align: center;
+    }
+    
+    
+    .seksjonfilter{
+        float:left;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .seksjonfilter .filtrering-btn{
+        font-size: 1.337vw;
+        border-radius: 3.342vw;
+        margin: 0.668vw;
+        padding: 0.668vw 0.668vw 0.668vw 1.337vw;
+    }
+
+    .seksjonfilter .filtrering-btn i{
+        padding-left: 1.337vw;
+    }
+
+    .seksjonfilter li{
+        display: flex;
+        justify-content: left;
+        width: fit-content;
+    }
+
+    .seksjonfilter .ikkeblock{
+        display:flex;
+        justify-content: left;
+        width: fit-content;
+    }
+
+    .seksjonfilter .blockseksjon{
+        display: flex;
+        justify-content: left;
+        column-span: all;
+    }
+
+    .andrefiltre{
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+    }
+
+    .andrefiltre li{
+        display: flex;
+        justify-content: left;
+    }
+
+    .andrefiltre .filtrering-btn{
+        width: 26.738vw;
+        text-align: left;
+        padding-left: 0.668vw;
+        font-size: 1.337vw;
+    }
+
     }
