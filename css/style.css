@@ -1144,31 +1144,29 @@ article .favorittprodukt{
         float: right;
     }
 
-    .sorterknapp{
-        float:right;
-        display: flex;
-        justify-content: right;
-        flex-direction: column;
-        width: fit-content;
-    }
 
     .sort{
-        display: flex;
-        width: fit-content;
         float:right;
+        display: flex;
         justify-content: right;
         flex-direction: column;
+        width: fit-content;
+        float:right;
         position: absolute;
+        top: 5%;
         right: 2%;
+        transform: translate(-5%, -2%);
     }
 
     .sort .filtrering-btn{
         font-size: 1.337vw;
-        padding: 0.668vw 2.005vw 0.334vw 0.668vw;
-        margin-top: 0.668vw;
-        border-radius: 3.342vw;
-        vertical-align: center;
+        padding: 0.500vw 1.250vw;
+        margin-top: 1.875vw;
+        margin-left: 5vw;
+        border-radius: 6.250vw;
     }
+
+    .sort .filtrering-btn
     
     
     .seksjonfilter{
