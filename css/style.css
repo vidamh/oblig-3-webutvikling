@@ -524,6 +524,13 @@ button{
     overflow: hidden;
 }
 
+.tredjeprodukt{
+    display: none;
+}
+
+.kundesktop{
+    display: none;
+}
 
 .produktliste{
     display: inline-block;
@@ -598,6 +605,10 @@ article .favorittprodukt{
     margin-top: 0;
 }
 
+#flere-produkter-desktop{
+    display: none;
+}
+
 #flere-produkter .kategori-btn{
     color: #fff;
     text-align: center;
@@ -615,7 +626,7 @@ article .favorittprodukt{
 
 /* Forsiden på desktop */
 
-@media only screen and (min-width: 1000px){
+@media only screen and (min-width: 800px){
     #grid-container{
         grid-template-areas: "header header header" "main main main" "footer footer footer";
     }
@@ -1057,13 +1068,14 @@ article .favorittprodukt{
 
     #grid-container-produktresultater{
         display: grid;
-        grid-template-areas: "header" "main" "footer";
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
     }
     
     #produktresultater{
         grid-template-areas: "main";
         display: grid;
         background-color: var(--lysegrå);
+        grid-column: 1/-1;
     }
     
     #flere-produkter{
@@ -1194,6 +1206,7 @@ article .favorittprodukt{
         display: flex;
         justify-content: left;
         column-span: all;
+        margin-top: 10px;
     }
 
     .andrefiltre{
@@ -1205,6 +1218,7 @@ article .favorittprodukt{
     .andrefiltre li{
         display: flex;
         justify-content: left;
+        margin: 3.750vw 0px;
     }
 
     .andrefiltre .filtrering-btn{
@@ -1212,6 +1226,156 @@ article .favorittprodukt{
         text-align: left;
         padding-left: 0.668vw;
         font-size: 1.337vw;
+    }
+
+    /* produktresultater del to */
+
+    #produktresultater-filtermeny{
+        display: flex;
+        width: fit-content;
+    }
+
+    .kundesktop{
+        display: inline-block;
+        max-width: fit-content;
+        position: relative;
+    }
+
+    .produktresultatene{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        overflow: hidden;
+        float: right;
+    }
+    
+    .produktliste{
+        display: inline-block;
+        gap: 0.5rem;
+        list-style: none;
+        width: 66.845vw;
+        margin: 1.337vw 1.337vw 0.668vw 1.337vw;
+    }
+    
+    .produktliste .førsteprodukt{
+        align-items: left; 
+        float: left;
+    }
+    
+    .produktliste .andreprodukt{
+        align-items: center; 
+        float: center;
+    }
+    
+    .produktliste .tredjeprodukt{
+        display: inline;
+        float: right;
+    }
+
+    .produktliste .kundesktop{
+        display: inline-block;
+        gap: 0.5rem;
+        list-style: none;
+    }
+
+    .produktliste li{
+        display: inline-block;
+        max-width: fit-content;
+        position: relative;
+        margin: 0px 2.500vw 5vw 2.500vw;
+    }
+    
+
+    .produktliste h3{
+        text-decoration: none;
+        color: #000;
+        font-size: 2.005vw;
+        padding: 0.334vw 0.334vw 0px 0.334vw;
+    }
+    
+    .produktliste p{
+        text-decoration: none;
+        color: #000;
+        font-size: 1.337vw;
+        padding: 0px 0.334vw 0px 0.334vw;
+    }
+    
+    
+    .produktliste img{
+        height: 15.625vw;
+        width: 15.625vw;
+        object-fit: cover;
+    }
+    
+    article .favorittprodukt{
+        background: transparent;
+        border: none;
+        text-align: left;
+        appearance: none;
+    }
+    
+    .hjerte{
+        display: flex;
+        justify-content: right;
+        position: absolute;
+        bottom: 15%;
+        right: 5%;
+        transform: translate(-15, -5);
+    }
+    
+    .favorittprodukt .glyphicon-heart{
+        font-size: 15px;
+    }
+    
+
+    /* produktresultater tredje del */
+
+    #knappoginfo{
+        display: none;
+    }
+
+    #flere-produkter{
+        display: grid;
+        grid-template-areas: "footer";
+        justify-content: right;
+        grid-column: 1/-1;
+    }
+
+    #flere-produkter-desktop{
+        display: flex;
+        background-color: #fff;
+        border-radius: 6.250vw;
+        margin: 1.250vw 3.750vw;
+        padding: 0.625vw 1.250vw;
+        text-align: right;
+        width: fit-content;
+    }
+
+    .sideknapper{
+        display: flex;
+        justify-content: right;
+        vertical-align: bottom;
+        padding: 0.625vw 1.250vw 0px 1.250vw;
+    }
+
+    .sideknapper i{
+        font-size: 1.875vw;
+        margin: 0px 1.875vw;
+        
+    }
+
+    .sideknapper a{
+        font-size: 1.875vw;
+        margin: 0px 0.625vw;
+    }
+
+    .sideknapper p{
+        font-size: 1.875vw;
+        margin: 0px 0.625vw;
+    }
+
+    .sideknapper #sidex{
+        margin: 0px 1.875vw 0px 0.625vw;
     }
 
     }
