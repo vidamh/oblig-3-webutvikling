@@ -350,12 +350,18 @@ button{
 
 /* Forside tredje del - brukes også til produktsiden som har samme section */
 
+
 #grid-container .fremhev-produkt{
+    width: 100%;
     display: grid;
     grid-area: footer;
     overflow: hidden;
     grid-column: 1/-1;
     grid-row: 3;
+}
+
+#grid-container .fremhevede-produkter{
+    background-color: var(--lysegrå);
 }
 
 .fremhevede-produkter{
@@ -1283,38 +1289,56 @@ article .favorittprodukt{
     
     /* forside tredje del */
 
+    #grid-container .fremhev-produkt{
+        background-color: var(--lysegrå);
+        overflow: hidden;
+        display: flex;
+        width: 100%;
+        display: grid;
+        grid-area: footer;
+        grid-column: 1/-1;
+        grid-row: 3;
+    }
+    
+
     .selveprodukt3{
         display: flex;
     }
     
-    #grid-container .fremhev-produkt{
-        grid-area: footer;
+    #grid-container- .fremhev-produkt{
+        grid-area: main;
         grid-column: 1/-1;
         display: grid;
         flex-direction: column;
-        align-items: center;
-        background-color: var(--lysegrå);
+        overflow: hidden;
         grid-row: 3;
+        width: 100%;
     }
 
+    .fremhevede-produkter{
+        display: block;
+        align-items: center;
+    }
 
     .fremhevede-produkter h2{
         font-size: 3.342vw;
         width: 100%;
     }
     
-    #grid-container .produkterfremhevetliste{
+    .produkterfremhevetliste{
         display: flex;
         flex-direction: row;
+        justify-content: center;
         gap: 0.5rem;
         list-style: none;
         display: block;
         column-span: all;
-        margin-left: 1.875vw;
+        margin-right: 3.750vw;
     }
     
     .produkterfremhevetliste li{
-        display: block;
+        display: inline-block;
+        margin: 0px 0.625vw 0px 0.625vw;
     }
     
     .produkterfremhevetliste h3{
