@@ -605,7 +605,7 @@ article .favorittprodukt{
     appearance: none;
 }
 
-.hjerte{
+.hjerter{
     display: flex;
     justify-content: right;
     position: absolute;
