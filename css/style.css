@@ -1304,16 +1304,6 @@ article .favorittprodukt{
     .selveprodukt3{
         display: flex;
     }
-    
-    #grid-container- .fremhev-produkt{
-        grid-area: main;
-        grid-column: 1/-1;
-        display: grid;
-        flex-direction: column;
-        overflow: hidden;
-        grid-row: 3;
-        width: 100%;
-    }
 
     .fremhevede-produkter{
         display: block;
