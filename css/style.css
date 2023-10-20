@@ -726,7 +726,7 @@ article .favorittprodukt{
     padding-bottom: 2.667vw;
 }
 
-#produktinfo #desktopinfo{
+.produkttekstli #desktopinfo{
     display: none;
 }
 
@@ -1785,7 +1785,7 @@ article .favorittprodukt{
     
     .produkttekstli #desktopinfo{
         display: inline-block;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .produkttekst{
