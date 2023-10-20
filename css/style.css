@@ -22,12 +22,13 @@
 }
 
 .hovedmeny{
-    display: flex;
-    flex-direction: row;
     background-color: var(--hvit);
     border-bottom: 1px solid #000;
-    grid-area: "header";
+    grid-area: header;
     height: 13.333vw;
+    display: grid;
+    overflow: hidden;
+    grid-column: 1/-1;
 }
 
 .logo-navbar{
@@ -131,8 +132,16 @@ button{
 
 /* forside */
 
+#grid-container{
+    grid-template-areas: "header" "main" "footer";
+    display: grid;
+}
+
 #forside{
-    grid-area: "main";
+    grid-area: main;
+    display: grid;
+    overflow: hidden;
+    grid-column: 1/-1;
 }
 
 /* forside første del */
@@ -341,14 +350,19 @@ button{
 
 /* Forside tredje del - brukes også til produktsiden som har samme section */
 
-.fremhev-produkt{
-    grid-area: "footer";
+#grid-container .fremhev-produkt{
+    display: grid;
+    grid-area: footer;
+    overflow: hidden;
+    grid-column: 1/-1;
+    grid-row: 3;
 }
 
 .fremhevede-produkter{
     background-color: var(--lysegrå);
     overflow: hidden;
     column-span: all;
+    width: 100%;
 }
 
 .selveprodukt3{
@@ -433,13 +447,6 @@ button{
     float: left;
 }
 
-/* Produktside andre del */
-
-#produktside .fremhevede-produkter{
-    background-color: var(--lyseblå);
-    overflow: hidden;
-}
-
 /* Produktresultater
 
 /* Produktresultater første del*/
@@ -449,13 +456,30 @@ button{
     grid-template-areas: "header" "main" "footer";
 }
 
+.hovedmeny{
+    display: grid;
+    grid-area: header;
+    overflow: hidden;
+    grid-column: 1/-1;
+}
+
 #produktresultater{
-    grid-area: "main";
-    background-color: var(--lysegrå)
+    display: grid;
+    grid-area: main;
+    background-color: var(--lysegrå);
+    overflow: hidden;
+    grid-column: 1/-1;
+}
+
+.produktresultater-filtermeny{
+    background-color: var(--lysegrå);
 }
 
 #flere-produkter{
-    grid-area: "footer";
+    display: grid;
+    grid-area: footer;
+    overflow: hidden;
+    grid-column: 1/-1;
 }
 
 .filtreogsideinfo{
@@ -597,12 +621,14 @@ article .favorittprodukt{
 /* Produktresultater tredje del */
 
 #flere-produkter{
-    grid-area: "footer";
+    grid-area: footer;
     background-color: var(--lysegrå);
-    display: flex;
+    display: grid;
     justify-content: center;
     column-span: all;
     margin-top: 0;
+    overflow: hidden;
+    grid-column: 1/-1;
 }
 
 #flere-produkter-desktop{
@@ -621,24 +647,287 @@ article .favorittprodukt{
     font-size: 4vw;
 }
 
-/* desktop styles */
+
+/* Produktside */
+
+/* Produktside første del */
+
+#grid-container-produktside{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+.hovedmeny{
+    display: grid;
+    grid-area: header;
+    overflow: hidden;
+    grid-column: 1/-1;
+}
+
+#produktside{
+    background-color: var(--lysegrå);
+    display: grid;
+    grid-area: main;
+    overflow: hidden;
+    grid-column: 1/-1;
+}
+
+#flere-produkter{
+    display: grid;
+    grid-area: footer;
+    overflow: hidden;
+    grid-column: 1/-1;
+}
+
+#produktside .her_er_du{
+    background-color: var(--lysegrå);
+}
+
+#produktinfo{
+    background-color: var(--lyseblå);
+    display: block;
+}
+
+.produktbilde_ikoner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.produktbilde_ikoner .sidepil-venstre{
+    position: absolute;
+    top: 45%;
+    left: 4%;
+    transform: translate(-20%, -4%);
+}
+
+.produktbilde_ikoner .sidepil-høyre{
+    position: absolute;
+    top: 45%;
+    right: 2%;
+    transform: translate(-20%, -4%);
+}
+
+.produktbilde_ikoner .hjerte{
+    position: absolute;
+    bottom: 80%;
+    right: 4%;
+}
+
+.produktbilde_ikoner .glyphicon-heart{
+    font-size: 8vw;
+}
+
+.produktbilde_ikoner img{
+    max-width: 100%;
+}
+
+#produktinfo{
+    padding-bottom: 2.667vw;
+}
+
+#produktinfo #desktopinfo{
+    display: none;
+}
+
+#produktinfo h2{
+    display: flex;
+    justify-content: left;
+    margin-left: 2.667vw;
+    font-size: 6.667vw;
+}
+
+#produktinfo p{
+    display: flex;
+    justify-content: left;
+    margin-left: 4vw;
+    font-size: 5.867vw;
+}
+
+/* produktside del to */
+
+.produktvalg{
+    background-color: var(--lysegrå);
+}
+
+.produktvalg #farge{
+    display: flex;
+    justify-content: left;
+    padding: 1.333vw 2.667vw 1.333vw 1.333vw;
+    background-color: #fff;
+    border-radius: 13.333vw;
+    margin: 6.667vw 2.667vw 2.667vw 0px;
+    font-size: 4.800vw;
+}
+
+.fargevalg{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.fargevalg .fa-check-circle{
+    position: absolute;
+    right: 50%;
+    top: 25%;
+    font-size: 5.333vw;
+}
+
+.fargevalgli{
+    list-style: none;
+    display: flex;
+    justify-content: left;
+}
+
+.fargevalg .valg{
+    background-color: #fff;
+    border: solid 1px #4d4d4d;
+    border-radius: 50%;
+    padding: 8vw;
+    margin: 2.667vw;
+}
+
+#favoritterdesktop{
+    display: none;
+}
+
+.andrevalgprodukt{
+    display: flex;
+    justify-content: left;
+    overflow: hidden;
+}
+
+.andrevalgli{
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    align-items: left;
+    margin: 2.667vw;
+}
+
+.andrevalgli .handlekurv-btn{
+    background-color: var(--mørkeblå);
+    color: #fff;
+    padding: 1.333vw 4vw 1.333vw 2.667vw;
+    font-size: 5.333vw;
+    margin-bottom: 5.333vw;
+    margin-top: 5.333vw;
+}
+
+.handlekurv-btn i{
+    margin-left: 11.200vw;
+    margin-right: 1.333vw;
+    font-size: 5.333vw;
+}
+
+.drop-down-btn{
+    background-color: #fff;
+    border-radius: 13.333vw;
+    border: solid 1px #4d4d4d;
+    padding: 1.333vw 2.667vw;
+    font-size: 5.333vw;
+    text-align: left;
+}
+
+.drop-down-btn i{
+    margin-left: 8vw;
+}
+
+.dytt1{
+    margin-right: 16vw;
+}
+
+.tilgjengelighet{
+    background-color: #fff;
+    padding: 1.333vw 2.667vw 0px 2.667vw;
+    display: flex;
+    justify-content: left;
+    font-size: 5.333vw;
+}
+
+.tilgjengelighet i{
+    color: #00ff40;
+    margin-left: 8vw;
+}
+
+.fraktdetaljer{
+    display: flex;
+    justify-content: left;
+
+}
+
+.frakt{
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    margin: 4vw;
+}
+
+.frakt p{
+    font-size: 5.333vw;
+}
+
+.frakt a{
+    font-size: 4vw;
+    font-weight: 300;
+    color: #000;
+}
+
+.detaljer-anmeldelser{
+    display: flex;
+    justify-content: left;
+    margin: 2.667vw;
+}
+
+.detaljer-anmeldelser-li{
+    text-align: left;
+    list-style: none;
+}
+
+.detaljer-anmeldelser-li .dytt2{
+    margin-right: 6.667vw;
+}
+
+.drop-down-btn{
+    margin-bottom: 5.333vw;
+}
 
 
-/* Forsiden på desktop */
+/* Produktside tredje del */
+
+#grid-container-produktside .fremhev-produkt{
+    width: 100%;
+    display: grid;
+    grid-area: footer;
+    overflow: hidden;
+    grid-column: 1/-1;
+    grid-row: 3;
+}
+
+#grid-container-produktside .fremhevede-produkter{
+    background-color: var(--lyseblå);
+}
+
+/* Desktop styles */
 
 @media only screen and (min-width: 800px){
+    /* Forside */
+
     #grid-container{
         grid-template-areas: "header header header" "main main main" "footer footer footer";
+        display: grid;
     }
 
     /* header */
 
     .hovedmeny{
-        display: block;
-        flex-direction: row;
+        display: grid;
+        grid-area: header;
         width: 100%;
         grid-column: 1/-1;
         height: 5.958vw;
+        overflow: hidden;
     }
 
     .meny{
@@ -757,10 +1046,11 @@ article .favorittprodukt{
     /* forside desktop */
 
     #forside{
-        grid-area: "main";
+        grid-area: main;
         grid-column: 1/-1;
-        display: flex;
+        display: grid;
         flex-direction: column;
+        overflow: hidden;
     }
 
     #forside-banner{
@@ -781,6 +1071,7 @@ article .favorittprodukt{
         max-width: 26.738vw;
         max-height: 26.738vw;
         margin: 10.027vw 1.337vw;
+        display: block;
     }
 
     #circle{
@@ -890,8 +1181,6 @@ article .favorittprodukt{
     /* forside andre del */
 
     #forside-skokategorier{
-        grid-area: "main";
-        grid-column: 1/-1;
         display: flex;
         flex-direction: column;
     }
@@ -982,13 +1271,14 @@ article .favorittprodukt{
         display: flex;
     }
     
-    .fremhev-produkt{
-        grid-area: "main";
+    #grid-container .fremhev-produkt{
+        grid-area: footer;
         grid-column: 1/-1;
-        display: flex;
+        display: grid;
         flex-direction: column;
         align-items: center;
         background-color: var(--lysegrå);
+        grid-row: 3;
     }
 
 
@@ -997,13 +1287,14 @@ article .favorittprodukt{
         width: 100%;
     }
     
-    .produkterfremhevetliste{
+    #grid-container .produkterfremhevetliste{
         display: flex;
         flex-direction: row;
         gap: 0.5rem;
         list-style: none;
         display: block;
         column-span: all;
+        margin-left: 1.875vw;
     }
     
     .produkterfremhevetliste li{
@@ -1057,13 +1348,6 @@ article .favorittprodukt{
         float: left;
     }
     
-    /* Produktside andre del */
-    
-    #produktside .fremhevede-produkter{
-        background-color: var(--lyseblå);
-        overflow: hidden;
-    }
-    
     /* Produktresultater første del */
 
     #grid-container-produktresultater{
@@ -1072,15 +1356,18 @@ article .favorittprodukt{
     }
     
     #produktresultater{
-        grid-template-areas: "main";
+        grid-area: main;
         display: grid;
         background-color: var(--lysegrå);
         grid-column: 1/-1;
+        overflow: hidden;
     }
     
     #flere-produkter{
-        grid-template-areas: "footer";
+        grid-area: footer;
         display: grid;
+        overflow: hidden;
+        grid-column: 1/-1;
     }
 
     .sideinformasjon .her_er_du{
@@ -1161,13 +1448,10 @@ article .favorittprodukt{
     .sort .filtrering-btn{
         font-size: 1.337vw;
         padding: 0.500vw 1.250vw;
-        margin-top: 1.875vw;
+        margin-top: 15px;
         margin-left: 5vw;
         border-radius: 6.250vw;
     }
-
-    .sort .filtrering-btn
-    
     
     .seksjonfilter{
         float:left;
@@ -1312,7 +1596,7 @@ article .favorittprodukt{
         appearance: none;
     }
     
-    .hjerte{
+    .hjerter{
         display: flex;
         justify-content: right;
         position: absolute;
@@ -1321,8 +1605,8 @@ article .favorittprodukt{
         transform: translate(-15, -5);
     }
     
-    .favorittprodukt .glyphicon-heart{
-        font-size: 15px;
+    .hjerter .favorittprodukt .glyphicon-heart{
+        font-size: 1.875vw;
     }
     
 
@@ -1332,11 +1616,12 @@ article .favorittprodukt{
         display: none;
     }
 
-    #flere-produkter{
+    .fremhev-produkt{
         display: grid;
-        grid-template-areas: "footer";
+        grid-template-areas: footer;
         justify-content: right;
         grid-column: 1/-1;
+        overflow: hidden;
     }
 
     #flere-produkter-desktop{
@@ -1347,6 +1632,7 @@ article .favorittprodukt{
         padding: 0.625vw 1.250vw;
         text-align: right;
         width: fit-content;
+        margin-left: 50vw;
     }
 
     .sideknapper{
@@ -1374,6 +1660,254 @@ article .favorittprodukt{
 
     .sideknapper #sidex{
         margin: 0px 1.875vw 0px 0.625vw;
+    }
+
+    /* produktside */
+
+    #grid-container-produktside{
+        display: grid;
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+    
+    #produktside{
+        background-color: var(--lysegrå);
+        display: grid;
+        grid-area: main;
+        overflow: hidden;
+        grid-column: 1/-1;
+    }
+    
+    .fremhev-produkt{
+        display: grid;
+        grid-area: footer;
+        overflow: hidden;
+        grid-column: 1/-1;
+    }
+
+    /* produktside første del */
+
+    #grid-container-produktside{
+        display: grid;
+        grid-template-areas: "header header header" "main main main" "footer footer footer";
+    }
+
+    .hovedmeny{
+        display: grid;
+        grid-area: header;
+        overflow: hidden;
+        grid-column: 1/-1;
+    }
+
+    .meny{
+        padding-top: 20px;
+    }
+    
+    .høyre{
+        margin-top: 10px;
+    }
+
+    #produktside{
+        background-color: var(--lysegrå);
+        display: grid;
+        grid-area: main;
+        overflow: hidden;
+        grid-column: 1/-1;
+    }
+
+    #produkt{
+        margin: 0px 30px;
+    }
+    
+    .fremhev-produkt{
+        display: grid;
+        grid-area: footer;
+        overflow: hidden;
+        grid-column: 1/-1;
+    }
+    
+    #produktside .her_er_du{
+        background-color: #fff;
+    }
+    
+    #produktinfo{
+        background-color: var(--lysegrå);
+        display: block;
+    }
+    
+    .produktbilde_ikoner{
+        position: relative;
+        display: block;
+        justify-content: left;
+        column-span: 2;
+    }
+    
+    .produktbilde_ikoner .sidepil-venstre{
+        position: absolute;
+        top: 85%;
+        left: 4%;
+    }
+    
+    .sidepil-venstre .glyphicon-chevron-left{
+        font-size: 3.750vw;
+    }
+
+    .produktbilde_ikoner .sidepil-høyre{
+        position: absolute;
+        top: 85%;
+        right: 42%;
+    }
+
+    .sidepil-høyre .glyphicon-chevron-right{
+        font-size: 3.750vw;
+    }
+    
+    .produktbilde_ikoner .hjerte{
+        position: absolute;
+        bottom: 85%;
+        right: 42%;
+    }
+    
+    .favorittprodukt .glyphicon-heart{
+        font-size: 5vw;
+    }
+    
+    .produktbilde_ikoner img{
+        display: flex;
+        width: 56.250vw;
+        height: 56.250vw;
+        object-fit: cover;
+        margin: 10px;
+    }
+    
+    #produktinfo{
+        padding-bottom: 2.667vw;
+    }
+    
+    .produkttekstli #desktopinfo{
+        display: inline-block;
+        font-size: 12px;
+    }
+
+    .produkttekst{
+        display: flex;
+        justify-content: right;
+    }
+
+    .produkttekstli{
+        display: block;
+        text-align: right;
+        list-style-type: none;
+    }
+
+    .produkttekstli li{
+        display: block;
+        text-align: left;
+    }
+    
+    .produkttekstli li h2{
+        display: flex;
+        justify-content: left;
+        font-size: 15px;
+    }
+    
+    .produkttekstli li p{
+        display: flex;
+        justify-content: left;
+        font-size: 15px;
+    }
+
+     /* Produktside andre del */
+    
+     #grid-container-produktside .fremhev-produkt{
+        background-color: var(--lyseblå);
+        overflow: hidden;
+        display: flex;
+    }
+
+    .selveprodukt3{
+        display: flex;
+    }
+    
+    #grid-container-produktside .fremhev-produkt{
+        grid-area: main;
+        grid-column: 1/-1;
+        display: grid;
+        flex-direction: column;
+        overflow: hidden;
+        grid-row: 3;
+    }
+
+    .fremhevede-produkter{
+        display: block;
+        align-items: center;
+    }
+
+    .fremhevede-produkter h2{
+        font-size: 3.342vw;
+        width: 100%;
+    }
+    
+    .produkterfremhevetliste{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        list-style: none;
+        display: block;
+        column-span: all;
+        margin-right: 3.750vw;
+    }
+    
+    .produkterfremhevetliste li{
+        display: inline-block;
+        margin: 0px 0.625vw 0px 0.625vw;
+    }
+    
+    .produkterfremhevetliste h3{
+        text-decoration: none;
+        color: #000;
+        font-size: 2.674vw;
+        padding: 0.334vw 0.334vw 0px 0.334vw;
+    }
+    
+    .produkterfremhevetliste p{
+        text-decoration: none;
+        color: #000;
+        font-size:2.005vw;
+        padding: 0px 0.334vw;
+    }
+    
+    .produkterfremhevetliste img{
+        height: 20.053vw;
+        width: 20.053vw;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .produkterfremhevetliste .førsteprodukt{
+        text-align: left;
+        float: left;
+    }
+    
+    .produkterfremhevetliste .andreprodukt{
+        text-align: left;
+        float: left
+    }
+
+    .produkterfremhevetliste .tredjeprodukt{
+        float: left;
+    }
+
+    .sidepiler{
+        display: block;
+    }
+
+    .sidepiler-til-venstre{
+       float: left;
+    }
+
+    .sidepil-venstre{
+        float: left;
     }
 
     }
