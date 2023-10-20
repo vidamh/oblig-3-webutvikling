@@ -723,25 +723,37 @@ article .favorittprodukt{
 }
 
 #produktinfo{
-    padding-bottom: 2.667vw;
+    background-color: var(--lysegrå);
+}
+
+#produktinfo .detaljer-anmeldelser-desktop{
+    display: none;
+}
+
+.produkttekst{
+    background-color: var(--lyseblå);
+    overflow: hidden;
+    padding: 0px 10px;
+}
+
+#pris{
+    font-size: 6.667vw;
 }
 
 .produkttekstli #desktopinfo{
     display: none;
 }
 
-#produktinfo h2{
-    display: flex;
-    justify-content: left;
-    margin-left: 2.667vw;
-    font-size: 6.667vw;
+.produkttekstli h2{
+    font-size: 8vw;
 }
 
-#produktinfo p{
-    display: flex;
-    justify-content: left;
-    margin-left: 4vw;
-    font-size: 5.867vw;
+.frakt{
+    margin: 0px;
+}
+
+.frakt h3{
+    font-size: 5.333vw;
 }
 
 /* produktside del to */
@@ -753,7 +765,7 @@ article .favorittprodukt{
 .produktvalg #farge{
     display: flex;
     justify-content: left;
-    padding: 1.333vw 2.667vw 1.333vw 1.333vw;
+    padding: 5px 2.667vw;
     background-color: #fff;
     border-radius: 13.333vw;
     margin: 6.667vw 2.667vw 2.667vw 0px;
@@ -786,6 +798,10 @@ article .favorittprodukt{
     border-radius: 50%;
     padding: 8vw;
     margin: 2.667vw;
+}
+
+#fargeprodukt{
+    list-style-type: none;
 }
 
 #favoritterdesktop{
@@ -1715,9 +1731,16 @@ article .favorittprodukt{
     }
 
     #produkt{
-        margin: 0px 30px;
+        margin: 3.750vw;
+        display: block;
     }
     
+    #produktcontainer{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
     .fremhev-produkt{
         display: grid;
         grid-area: footer;
@@ -1731,14 +1754,29 @@ article .favorittprodukt{
     
     #produktinfo{
         background-color: var(--lysegrå);
-        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #produktinfo .detaljer-anmeldelser-desktop{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .produkttekstli li h2{
+        font-size: 3.125vw;
+        margin-left: 0px;
     }
     
+    #pris{
+        font-size: 3.125vw;
+    }
+
     .produktbilde_ikoner{
         position: relative;
-        display: block;
+        display: flex;
         justify-content: left;
-        column-span: 2;
+        max-width: 50vw;
     }
     
     .produktbilde_ikoner .sidepil-venstre{
@@ -1754,7 +1792,7 @@ article .favorittprodukt{
     .produktbilde_ikoner .sidepil-høyre{
         position: absolute;
         top: 85%;
-        right: 42%;
+        right: 0%;
     }
 
     .sidepil-høyre .glyphicon-chevron-right{
@@ -1764,7 +1802,7 @@ article .favorittprodukt{
     .produktbilde_ikoner .hjerte{
         position: absolute;
         bottom: 85%;
-        right: 42%;
+        right: 4%;
     }
     
     .favorittprodukt .glyphicon-heart{
@@ -1773,24 +1811,33 @@ article .favorittprodukt{
     
     .produktbilde_ikoner img{
         display: flex;
-        width: 56.250vw;
-        height: 56.250vw;
+        width: 50vw;
+        height: 50vw;
         object-fit: cover;
-        margin: 10px;
     }
     
     #produktinfo{
         padding-bottom: 2.667vw;
+        display: flex;
     }
     
     .produkttekstli #desktopinfo{
         display: inline-block;
-        font-size: 15px;
+        font-size: 1.875vw
+    }
+
+    #desktopinfo #desktoptekst{
+        font-size: 1.875vw;
     }
 
     .produkttekst{
         display: flex;
-        justify-content: right;
+        flex-direction: column;
+        justify-content: left;
+        background-color: var(--lyseblå);
+        padding: 5px 12.500vw 5px 1.250vw;
+        width: fit-content;
+        height: fit-content;
     }
 
     .produkttekstli{
@@ -1807,13 +1854,227 @@ article .favorittprodukt{
     .produkttekstli li h2{
         display: flex;
         justify-content: left;
-        font-size: 15px;
     }
     
     .produkttekstli li p{
         display: flex;
         justify-content: left;
-        font-size: 15px;
+    }
+
+    .produktvalg{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 1.250vw;
+        align-content: center;
+    }
+
+    .produktvalg #farge{
+        display: flex;
+        justify-content: left;
+        background-color: #fff;
+        border-radius: 13.333vw;
+        font-size: 2.500vw;
+        margin: 0px;
+    }
+    
+    .fargevalg{
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    #fargeprodukt{
+        margin:0px 1.250vw;
+    }
+    
+    .valg{
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .fargevalg .fa-check-circle{
+        position: absolute;
+        right: 10%;
+        top: 10%;
+        font-size: 2.500vw;
+    }
+    
+    .fargevalgli{
+        list-style: none;
+        display: flex;
+        margin: 0px;
+    }
+
+    .fargevalgli .fargeinfo{
+        display: block;
+    }
+    
+    .fargevalg .valg{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border: solid 1px #4d4d4d;
+        border-radius: 2.500vw;
+        width: fit-content;
+        padding: 3.750vw;
+    }
+
+    .fargeknapp{
+        display: flex;
+        justify-content: left;
+    }
+
+    #favoritterdesktop{
+        display: flex;
+        padding: 5px 1.250vw;
+        background-color: #fff;
+        border-radius: 3.750vw;
+        font-size: 2.500vw;
+        justify-content: center;
+    }
+
+    #favoritterdesktop .glyphicon-heart{
+        font-size: 2.500vw;
+        margin-left: 2.500vw;
+    }
+
+    .andrevalgprodukt{
+        display: flex;
+        justify-content: left;
+        overflow: hidden;
+    }
+    
+    .andrevalgli{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        padding: 0;
+        margin: 0px 1.250vw;
+        gap: 3.750vw;
+    }
+
+    .andrevalgli li{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    
+    .andrevalgli .handlekurv-btn{
+        background-color: var(--mørkeblå);
+        color: #fff;
+        font-size: 2.500vw;
+        display: flex;
+        justify-content: left;
+        padding: 5px 1.250vw;
+        margin: 0px;
+    }
+    
+    .handlekurv-btn i{
+        margin-left: 11.200vw;
+        margin-right: 1.333vw;
+        font-size: 2.500vw;
+    }
+    
+    .drop-down-btn{
+        background-color: #fff;
+        border-radius: 13.333vw;
+        border: solid 1px #4d4d4d;
+        padding: 5px 1.250vw;
+        font-size: 2.500vw;
+        text-align: left;
+        width: fit-content;
+        margin: 0px;
+    }
+    
+    .drop-down-btn i{
+        margin-left: 8vw;
+    }
+
+    
+    .tilgjengelighet{
+        background-color: #fff;
+        padding: 5px 1.250vw;
+        display: flex;
+        justify-content: left;
+        font-size: 2.500vw;
+    }
+    
+    .tilgjengelighet i{
+        color: #00ff40;
+        margin-left: 8vw;
+    }
+    
+    .fraktdetaljer{
+        display: flex;
+        justify-content: left;
+    
+    }
+    
+    .frakt{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        text-align: left;
+        margin: 0px 1.250vw;
+        padding: 0px;
+    }
+    
+    .frakt p{
+        font-size: 2.500vw;
+    }
+    
+    .frakt a{
+        font-size: 2.250vw;
+        font-weight: 300;
+        color: #000;
+    }
+
+    .frakt h3{
+        font-size: 2.500vw
+    }
+    
+    .detaljer-anmeldelser{
+        display: none;
+    }
+    
+    .detaljer-anmeldelser-desktop .detaljer-anmeldelser-li{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        list-style: none;
+        padding: 1.250vw;
+        margin: 0px;
+        gap: 2.500vw;
+    }
+    
+
+    .detaljer-anmeldelser-li .drop-down-btn{
+        padding: 5px 1.250vw;
+        margin: 0px;
+        font-size: 1.875vw;
+        width: fit-content;
+    }
+
+    .detaljer-anmeldelser-li .drop-down-btn i{
+        margin-left: 1.250vw;
+    }
+
+    .detaljer-anmeldelser-desktop .detaljer-anmeldelser-li .dytt2{
+        margin: 0px;
+        text-align: right;
+    }
+    
+    .detaljer-anmeldelser-desktop .detaljer-anmeldelser-li .dytt1{
+        text-align: left;
+        margin: 0px;
     }
 
      /* Produktside andre del */
