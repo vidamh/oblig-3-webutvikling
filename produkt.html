@@ -75,62 +75,71 @@
                 </ul>
             </nav>
             <section id="produkt">
-                <section id="produktinfo">
-                    <section class="produktbilde_ikoner">
-                        <img src="img/sneakers_merke.jpg" alt="Product image for sneakers">
-                        <span class="sidepiler">
-                            <button class="sidepil-venstre">
-                                <i class="glyphicon glyphicon-chevron-left"></i>
-                            </button>
-                            <button class="sidepil-høyre">
-                                <i class="glyphicon glyphicon-chevron-right"></i>
-                            </button>
-                        </span>
-                        <span class="hjerte">
-                            <button class="favorittprodukt">
-                                <i class="glyphicon glyphicon-heart"></i>
-                            </button>
-                        </span>
+                <section id="produktcontainer">
+                    <section id="produktinfo">
+                        <section class="produktbilde_ikoner">
+                            <img src="img/sneakers_merke.jpg" alt="Product image for sneakers">
+                            <span class="sidepiler">
+                                <button class="sidepil-venstre">
+                                    <i class="glyphicon glyphicon-chevron-left"></i>
+                                </button>
+                                <button class="sidepil-høyre">
+                                    <i class="glyphicon glyphicon-chevron-right"></i>
+                                </button>
+                            </span>
+                            <span class="hjerte">
+                                <button class="favorittprodukt">
+                                    <i class="glyphicon glyphicon-heart"></i>
+                                </button>
+                            </span>
+                        </section>
+                        <section class="detaljer-anmeldelser-desktop">
+                            <ul class="detaljer-anmeldelser-li">
+                                <li class="dytt1"><button class="drop-down-btn">Produktdetaljer <i class="glyphicon glyphicon-chevron-down"></i></button></li>
+                                <li class="dytt2"><button class="drop-down-btn">Anmeldelser <i class="glyphicon glyphicon-chevron-down"></i></button></li>
+                            </ul>
+                        </section>
                     </section>
-                    <section class="produkttekst">
-                        <ul class="produkttekstli">
-                            <li><h2>Praesent</h2></li>
-                            <li id="desktopinfo"><p id="desktoptekst">Aliquam ut turpis varius,<br>efficitur justo a></p></li>
-                            <li><p>2000,-</p></li>
-                        </ul>
+                    <section class="produktvalg">
+                        <section class="produkttekst">
+                            <ul class="produkttekstli">
+                                <li><h2>Praesent</h2></li>
+                                <li id="desktopinfo"><p id="desktoptekst">Aliquam ut turpis varius, efficitur justo a</p></li>
+                                <li><p id="pris">2000,-</p></li>
+                            </ul>
+                        </section>
+                        <section class="fargevalg">
+                            <ul id="fargeprodukt">
+                                <li class="fargeknapp"><button id="farge">Farge: Hvit</button></li>
+                            </ul>
+                            <ul class="fargevalgli">
+                                <li class="valg"><button class="farge-btn"><i class="fa fa-check-circle"></i></button></li>
+                                <li class="valg"><button class="farge-btn"></button></li>
+                                <li class="valg"><button class="farge-btn"></button></li>
+                            </ul>
+                        </section>
+                        <section class="andrevalgprodukt">
+                            <ul class="andrevalgli">
+                                <li class="dytt1"><button class="drop-down-btn">Størrelse <i class="glyphicon glyphicon-chevron-down"></i></button></li>
+                                <li><button class="handlekurv-btn">Legg til i kurv<i class="glyphicon glyphicon-shopping-cart"></i></button></li>
+                                <li><button class="favoritt-btn" id="favoritterdesktop">Lagre i favoritter<i class="glyphicon glyphicon-heart"></i></button></li>
+                                <li><button class="tilgjengelighet">Tilgjengelighet:<i class="glyphicon glyphicon-ok"></i></button></li>
+                            </ul>
+                        </section>
+                        <section class="fraktdetaljer">
+                            <ul class="frakt">
+                                <li><h3>Leveres innen 2 - 3 arbeidsdager</h3></li>
+                                <li><a href="#" class="frakt-info">Les mer om frakt, retur og bytte her</a></li>
+                            </ul>
+                        </section>
+                        <section class="detaljer-anmeldelser">
+                            <ul class="detaljer-anmeldelser-li">
+                                <li><button class="drop-down-btn">Produktdetaljer <i class="glyphicon glyphicon-chevron-down"></i></button></li>
+                                <li class="dytt2"><button class="drop-down-btn">Anmeldelser <i class="glyphicon glyphicon-chevron-down"></i></button></li>
+                            </ul>
+                        </section>
                     </section>
-                </section>
-                <section class="produktvalg">
-                    <section class="fargevalg">
-                        <i class="fa fa-check-circle"></i>
-                        <ul class="fargevalgli">
-                            <li><p id="farge">Farge: Hvit</p></li>
-                            <li class="valg"><button class="farge-btn"></button></li>
-                            <li class="valg"><button class="farge-btn"></button></li>
-                            <li class="valg"><button class="farge-btn"></button></li>
-                        </ul>
-                    </section>
-                    <section class="andrevalgprodukt">
-                        <ul class="andrevalgli">
-                            <li class="dytt1"><button class="drop-down-btn">Størrelse <i class="glyphicon glyphicon-chevron-down"></i></button></li>
-                            <li><button class="handlekurv-btn">Legg til i kurv<i class="glyphicon glyphicon-shopping-cart"></i></button></li>
-                            <li><button class="favoritt-btn" id="favoritterdesktop">Lagre i favoritter</button></li>
-                            <li><button class="tilgjengelighet">Tilgjengelighet:<i class="glyphicon glyphicon-ok"></i></button></li>
-                        </ul>
-                    </section>
-                    <section class="fraktdetaljer">
-                        <ul class="frakt">
-                            <li><p>Leveres innen 2 - 3 arbeidsdager</p></li>
-                            <li><a href="#" class="frakt-info">Les mer om frakt, retur og bytte her</a></li>
-                        </ul>
-                    </section>
-                    <section class="detaljer-anmeldelser">
-                        <ul class="detaljer-anmeldelser-li">
-                            <li><button class="drop-down-btn">Produktdetaljer <i class="glyphicon glyphicon-chevron-down"></i></button></li>
-                            <li class="dytt2"><button class="drop-down-btn">Anmeldelser <i class="glyphicon glyphicon-chevron-down"></i></button></li>
-                        </ul>
-                    </section>
-                </section>
+                </section>    
             </section>
         </main>
         <footer class="fremhev-produkt">
