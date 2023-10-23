@@ -48,3 +48,15 @@ Image by <a href="https://pixabay.com/users/mr-special-9967825/?utm_source=link-
 
 kvinnesko_lær
 Image by <a href="https://pixabay.com/users/ddalki3003-527276/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=506826">eungyo seo</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=506826">Pixabay</a>
+
+
+/* Andre kilder */
+
+Font
+Poppins fra Google Fonts - https://fonts.google.com/specimen/Poppins
+
+Icons
+Bootstrap Glyphicons fra https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp og 
+https://getbootstrap.com/docs/3.3/components/ laget av https://glyphicons.com/
+Font Awesome versjon 4.7 fra https://fontawesome.com/v4/icons/ laget av https://fontawesome.com/
+Alle ikonpakker er funnet gjennom https://www.w3schools.com/icons/

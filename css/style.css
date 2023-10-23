@@ -157,6 +157,9 @@ button{
     overflow: hidden;
 }
 
+/* CSS for sirkel med multiline tekst hentet fra
+https://stackoverflow.com/questions/16615403/how-to-draw-a-circle-with-text-in-the-middle */
+
 #circlecontainer{
     margin: 1.337vw 16vw;
 }
